@@ -1,0 +1,182 @@
+﻿/*@!Encoding:65001*/
+// Copyright (c) 2024 Vector Informatik GmbH  
+
+// Permission is hereby granted, free of charge, to any person obtaining  
+// a copy of this software and associated documentation files (the  
+// "Software"), to deal in the Software without restriction, including  
+// without limitation the rights to use, copy, modify, merge, publish,  
+// distribute, sublicense, and/or sell copies of the Software, and to  
+// permit persons to whom the Software is furnished to do so, subject to  
+// the following conditions:  
+   
+// The above copyright notice and this permission notice shall be  
+// included in all copies or substantial portions of the Software.  
+   
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND  
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE  
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION  
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION  
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+includes
+{
+}
+
+variables
+{ 
+  const float FPGA_Frequency = 80000000;
+  const dword TimeoutValue = 0xFFFFFFFF;
+}
+
+
+
+// analog
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch1::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch1::PulseCounter, 0);
+}
+
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch2::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch2::PulseCounter, 1);
+}
+
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch3::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch3::PulseCounter, 2);
+}
+
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch4::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch4::PulseCounter, 3);
+}
+
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch5::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch5::PulseCounter, 4);
+}
+
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch6::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch6::PulseCounter, 5);
+}
+
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch7::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch7::PulseCounter, 6);
+}
+
+on sysvar sysvar::VTS::VT5838_1_AIn_Ch8::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_AIn_Ch8::PulseCounter, 7);
+}
+
+// digital
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch1::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch1::PulseCounter, 8);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch2::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch2::PulseCounter, 9);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch3::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch3::PulseCounter, 10);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch4::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch4::PulseCounter, 11);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch5::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch5::PulseCounter, 12);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch6::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch6::PulseCounter, 13);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch7::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch7::PulseCounter, 14);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch8::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch8::PulseCounter, 15);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch9::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch9::PulseCounter, 16);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch10::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch10::PulseCounter, 17);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch11::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch11::PulseCounter, 18);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch12::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch12::PulseCounter, 19);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch13::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch13::PulseCounter, 20);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch14::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch14::PulseCounter, 21);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch15::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch15::PulseCounter, 22);
+}
+
+on sysvar_update sysvar::VTS::VT5838_1_DIO_Ch16::PeriodCounter
+{
+  FrequencyDutyCycle(@this, @sysvar::VTS::VT5838_1_DIO_Ch16::PulseCounter, 23);
+}
+
+//
+
+void FrequencyDutyCycle (dword PeriodCounter, dword PulseCounter, dword Channel)
+{
+  if (PeriodCounter == TimeoutValue)
+  {
+    @sysvarMember::Measurement::Frequency[Channel] = 0;
+    //
+    if (PulseCounter == TimeoutValue)                       // timeout while signal is '1'
+      @sysvarMember::Measurement::DutyCycle[Channel] = 100; // set to 100%
+    else                                                    // timeout while signal is '0'
+      @sysvarMember::Measurement::DutyCycle[Channel] = 0;   // set to 0%
+  }
+  //
+  else if (PeriodCounter != 0)
+  {
+    @sysvarMember::Measurement::Frequency[Channel] = FPGA_Frequency / PeriodCounter;
+    @sysvarMember::Measurement::DutyCycle[Channel] = PulseCounter / PeriodCounter * 100;
+  }
+  //
+  else
+    @sysvarMember::Measurement::Frequency[Channel] = -1;
+    @sysvarMember::Measurement::DutyCycle[Channel] = -1;
+}
+

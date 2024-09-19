@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project TargetModuleType="VT5838" Workflow="1" FPGAClockFrequency="0" FPGAVariant="0" ReadBlockUpdateTimeUs="1000" ReadBlockUpdateTimeMs="1" Comment="IP Library&#xD;&#xA;Version: 1.0" Version="3" EnableIBC="false" EnableIBCPlus="false" IBCMaster="">
+  <Sysvars>
+    <Sysvar Name="WriteEnable_a" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="9" TimeStamp="0" />
+    <Sysvar Name="WriteEnable_b" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="9" TimeStamp="0" />
+    <Sysvar Name="DataIn_a" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="9" TimeStamp="0" />
+    <Sysvar Name="DataIn_b" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="9" TimeStamp="0" />
+    <Sysvar Name="Address_a" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="9" TimeStamp="0" />
+    <Sysvar Name="Address_b" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="9" TimeStamp="0" />
+    <Sysvar Name="DataOut_a" IsOutput="false" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="9" TimeStamp="0" />
+    <Sysvar Name="DataOut_b" IsOutput="false" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="9" TimeStamp="0" />
+    <Sysvar Name="WriteEnable_a" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="10" TimeStamp="0" />
+    <Sysvar Name="WriteEnable_b" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="10" TimeStamp="0" />
+    <Sysvar Name="DataIn_a" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="10" TimeStamp="0" />
+    <Sysvar Name="DataIn_b" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="10" TimeStamp="0" />
+    <Sysvar Name="Address_a" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="10" TimeStamp="0" />
+    <Sysvar Name="Address_b" IsOutput="true" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="10" TimeStamp="0" />
+    <Sysvar Name="DataOut_a" IsOutput="false" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="10" TimeStamp="0" />
+    <Sysvar Name="DataOut_b" IsOutput="false" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="10" TimeStamp="0" />
+  </Sysvars>
+  <ModuleSpecificSettings NumAvalonInterfaces1="0" NumBurstInterfaces1="0" NumAvalonInterfaces2="0" NumBurstInterfaces2="0" AdcFrequencyHz="1000" DacFrequencyHz="1000" DacMode="0" AdcMode="0" />
+</Project>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<VTSConfiguration version="6">
+
+  <module MDID="" VDID="33889517615643CDE9CC6BA4AF393E8500000000" interface="1" productCode="16ce00" revision="1001300" serialNo="1" vendorID="5">
+    <channels>
+      <channel name="VT5838_1_AIn_Ch1" startStateEnabled="false"/>
+      <channel name="VT5838_1_AIn_Ch2" startStateEnabled="false"/>
+      <channel name="VT5838_1_AIn_Ch3" startStateEnabled="false"/>
+      <channel name="VT5838_1_AIn_Ch4" startStateEnabled="false"/>
+      <channel name="VT5838_1_AIn_Ch5" startStateEnabled="false"/>
+      <channel name="VT5838_1_AIn_Ch6" startStateEnabled="false"/>
+      <channel name="VT5838_1_AIn_Ch7" startStateEnabled="false"/>
+      <channel name="VT5838_1_AIn_Ch8" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch1" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch2" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch3" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch4" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch5" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch6" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch7" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch8" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch9" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch10" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch11" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch12" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch13" startStateEnabled="false"/>
+      <channel name="VT5838_1_AOut_Ch14" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch1" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch2" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch3" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch4" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch5" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch6" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch7" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch8" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch9" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch10" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch11" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch12" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch13" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch14" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch15" startStateEnabled="false"/>
+      <channel name="VT5838_1_DIO_Ch16" startStateEnabled="false"/>
+    </channels>
+    <common name="VT5838_1" startStateEnabled="false"/>
+    <values>
+      <value active="false" data="1900" id="80004100"/>
+      <value active="false" id="80000100"/>
+      <value active="false" data="00000000" id="82001000"/>
+      <value active="false" data="1900" id="80004200"/>
+      <value active="false" id="80000200"/>
+      <value active="false" data="00000000" id="82001100"/>
+      <value active="false" data="1900" id="80004300"/>
+      <value active="false" id="80000300"/>
+      <value active="false" data="1900" id="80004400"/>
+      <value active="false" id="80000400"/>
+      <value active="false" data="1900" id="80004500"/>
+      <value active="false" id="80000500"/>
+      <value active="false" data="00000000" id="82001400"/>
+      <value active="false" data="1900" id="80004600"/>
+      <value active="false" id="80000600"/>
+      <value active="false" data="00000000" id="82001500"/>
+      <value active="false" data="1900" id="80004700"/>
+      <value active="false" id="80000700"/>
+      <value active="false" data="1900" id="80004800"/>
+      <value active="false" id="80000800"/>
+      <value active="false" data="e204" id="80004900"/>
+      <value active="false" id="80000900"/>
+      <value active="false" data="00000000" id="82001800"/>
+      <value active="false" data="e204" id="80004a00"/>
+      <value active="false" id="80000a00"/>
+      <value active="false" data="00000000" id="82001900"/>
+      <value active="false" data="e204" id="80004b00"/>
+      <value active="false" id="80000b00"/>
+      <value active="false" data="e204" id="80004c00"/>
+      <value active="false" id="80000c00"/>
+      <value active="false" data="e204" id="80004d00"/>
+      <value active="false" id="80000d00"/>
+      <value active="false" data="00000000" id="82001c00"/>
+      <value active="false" data="e204" id="80004e00"/>
+      <value active="false" id="80000e00"/>
+      <value active="false" data="00000000" id="82001d00"/>
+      <value active="false" data="e204" id="80004f00"/>
+      <value active="false" id="80000f00"/>
+      <value active="true" cycleTime="64" id="2000200"/>
+      <value active="false" data="e204" id="80005000"/>
+      <value active="false" id="80001000"/>
+      <value active="false" id="80001100"/>
+      <value active="false" id="80001200"/>
+      <value active="false" data="00000000" id="82002000"/>
+      <value active="false" data="00000000" id="82002100"/>
+      <value active="false" id="80001300"/>
+      <value active="false" id="80001400"/>
+      <value active="false" id="80001500"/>
+      <value active="false" data="00000000" id="82002400"/>
+      <value active="false" id="80001600"/>
+      <value active="false" data="00000000" id="82002800"/>
+      <value active="false" id="80001a00"/>
+      <value active="false" data="1900" id="80003900"/>
+      <value active="false" id="80001c00"/>
+      <value active="false" data="1900" id="80003a00"/>
+      <value active="false" data="00000000" id="82002c00"/>
+      <value active="false" id="80001e00"/>
+      <value active="false" data="1900" id="80003b00"/>
+      <value active="false" data="00000000" id="82001200"/>
+      <value active="false" id="80002000"/>
+      <value active="false" data="1900" id="80003c00"/>
+      <value active="false" id="80002200"/>
+      <value active="false" data="1900" id="80003d00"/>
+      <value active="false" data="00000000" id="82001600"/>
+      <value active="false" id="80002400"/>
+      <value active="false" data="1900" id="80003e00"/>
+      <value active="false" id="80002600"/>
+      <value active="false" data="1900" id="80003f00"/>
+      <value active="false" data="00000000" id="82001a00"/>
+      <value active="false" id="80002800"/>
+      <value active="false" data="1900" id="80004000"/>
+      <value active="false" id="80002a00"/>
+      <value active="false" data="00000000" id="82001e00"/>
+      <value active="false" id="80002c00"/>
+      <value active="false" id="80002e00"/>
+      <value active="false" id="80003000"/>
+      <value active="false" id="80003200"/>
+      <value active="false" id="80003400"/>
+      <value active="false" id="80003600"/>
+      <value active="false" id="80003800"/>
+      <value active="false" id="80001800"/>
+      <value active="false" data="00000000" id="82002500"/>
+      <value active="false" data="00000000" id="82002900"/>
+      <value active="false" data="00000000" id="82002d00"/>
+      <value active="false" data="00000000" id="82001300"/>
+      <value active="false" data="00000000" id="82001700"/>
+      <value active="false" data="00000000" id="82001b00"/>
+      <value active="false" data="00000000" id="82001f00"/>
+      <value active="true" cycleTime="64" id="2001000"/>
+      <value active="true" cycleTime="64" id="2001400"/>
+      <value active="true" cycleTime="64" id="2001900"/>
+      <value active="true" cycleTime="64" id="2001c00"/>
+      <value active="true" cycleTime="64" id="2001d00"/>
+      <value active="false" data="005a6202" id="82000300"/>
+      <value active="true" cycleTime="64" id="2000600"/>
+      <value active="false" data="005a6202" id="82000700"/>
+      <value active="false" data="005a6202" id="82000a00"/>
+      <value active="true" cycleTime="64" id="2000b00"/>
+      <value active="true" cycleTime="64" id="2000e00"/>
+      <value active="true" cycleTime="64" id="2000f00"/>
+      <value active="false" id="2001e00"/>
+      <value active="true" cycleTime="64" id="2000000"/>
+      <value active="true" cycleTime="64" id="2000100"/>
+      <value active="true" cycleTime="64" id="2000300"/>
+      <value active="true" cycleTime="64" id="2000400"/>
+      <value active="true" cycleTime="64" id="2000500"/>
+      <value active="true" cycleTime="64" id="2000700"/>
+      <value active="true" cycleTime="64" id="2000800"/>
+      <value active="true" cycleTime="64" id="2000900"/>
+      <value active="true" cycleTime="64" id="2000a00"/>
+      <value active="true" cycleTime="64" id="2000c00"/>
+      <value active="true" cycleTime="64" id="2000d00"/>
+      <value active="true" cycleTime="64" id="2001100"/>
+      <value active="true" cycleTime="64" id="2001200"/>
+      <value active="true" cycleTime="64" id="2001300"/>
+      <value active="true" cycleTime="64" id="2001500"/>
+      <value active="true" cycleTime="64" id="2001600"/>
+      <value active="true" cycleTime="64" id="2001700"/>
+      <value active="true" cycleTime="64" id="2001800"/>
+      <value active="true" cycleTime="64" id="2001a00"/>
+      <value active="true" cycleTime="64" id="2001b00"/>
+      <value active="false" data="005a6202" id="82000000"/>
+      <value active="false" data="005a6202" id="82000100"/>
+      <value active="false" data="005a6202" id="82000200"/>
+      <value active="false" data="005a6202" id="82000400"/>
+      <value active="false" data="005a6202" id="82000500"/>
+      <value active="false" data="005a6202" id="82000600"/>
+      <value active="false" data="005a6202" id="82000800"/>
+      <value active="false" data="005a6202" id="82000900"/>
+      <value active="false" data="005a6202" id="82000b00"/>
+      <value active="false" data="005a6202" id="82000c00"/>
+      <value active="false" data="005a6202" id="82000d00"/>
+      <value active="false" data="005a6202" id="82000e00"/>
+      <value active="false" data="005a6202" id="82000f00"/>
+      <value active="false" data="00000000" id="82002200"/>
+      <value active="false" data="00000000" id="82002300"/>
+      <value active="false" data="00000000" id="82002600"/>
+      <value active="false" data="00000000" id="82002700"/>
+      <value active="false" data="00000000" id="82002a00"/>
+      <value active="false" data="00000000" id="82002b00"/>
+    </values>
+  </module>
+
+  <MGUIConfig flipRackOrder="false" serialData="rack[12];mapping[0,0,0];"/>
+
+</VTSConfiguration>

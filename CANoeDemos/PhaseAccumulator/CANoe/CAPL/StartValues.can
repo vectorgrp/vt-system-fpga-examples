@@ -1,0 +1,68 @@
+﻿/*@!Encoding:65001*/
+// Copyright (c) 2024 Vector Informatik GmbH  
+
+// Permission is hereby granted, free of charge, to any person obtaining  
+// a copy of this software and associated documentation files (the  
+// "Software"), to deal in the Software without restriction, including  
+// without limitation the rights to use, copy, modify, merge, publish,  
+// distribute, sublicense, and/or sell copies of the Software, and to  
+// permit persons to whom the Software is furnished to do so, subject to  
+// the following conditions:  
+   
+// The above copyright notice and this permission notice shall be  
+// included in all copies or substantial portions of the Software.  
+   
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND  
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE  
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION  
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION  
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+
+
+includes
+{
+}
+
+variables
+{ 
+}
+
+
+on start 
+{
+  // analog output
+  sysvar::VTS::VT5838_1_AOut_Ch1.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch2.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch3.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch4.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch5.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch6.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch7.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch8.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch9.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch10.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch11.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch12.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch13.SetStimulationMode(eVTSStimulationModeVoltage);
+  sysvar::VTS::VT5838_1_AOut_Ch14.SetStimulationMode(eVTSStimulationModeVoltage);
+  //
+  // digital output
+  sysvar::VTS::VT5838_1_DIO_Ch1.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch2.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch3.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch4.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch5.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch6.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch7.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch8.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch9.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch10.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch11.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch12.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch13.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch14.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch15.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+  sysvar::VTS::VT5838_1_DIO_Ch16.SetOutputMode(eVTS5838OutputModeDIOPushPull);
+}
