@@ -20,6 +20,6 @@ The *demo* folder includes a CANoe demo and additional VHDL files used to integr
 
 ## Changelog
 
-### Version 1.0 (19.09.2024)
+### Version 1.0 (2024-09-19)
 
 - creation
