@@ -18,6 +18,10 @@ The *CANoe demos* folder (table below) includes a CANoe demo and additional VHDL
 | Measurement | 1.0| 2024-07-26 | [Project](/Projects/Measurement/) | [VT5838](/CANoeDemos/Measurement/) |  |
 | Full PWM | 1.0 | 2024-08-16 | - | [VT2848](/CANoeDemos/FullPWM/) | uses all 48 channels for PWM output & measurement |
 
+## Issues
+
+Bugs, glitches, notes and requests can be specified under [Issues](https://github.com/vectorgrp/vt-system-fpga-examples/issues).
+
 ## Changelog
 
 ### Version 1.0 (2024-09-19)
