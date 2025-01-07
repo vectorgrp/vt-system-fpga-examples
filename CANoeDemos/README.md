@@ -9,6 +9,12 @@ The demos are examples for the use of the different user FPGA projects. They use
 - uses [Measurement](../Projects/Measurement/)
 - uses [Phase Accumulator](../Projects/PhaseAccumulator/)
 
+## Incremental Encoder
+
+- demo for the [Incremental Encoder](../Projects/IncrementalEncoder/) project
+- uses [Common Source Files](../Projects/CommonSourceFiles/)
+- uses [Phase Accumulator](../Projects/PhaseAccumulator/) for the encoder timing
+
 ## Measurement
 
 - demo for the [Measurement](../Projects/Measurement/) project

@@ -22,5 +22,11 @@
 *.vtesettings
 *.xpa
 
+questa/work/_vmake
+questa/work/@_opt
+questa/work/@_opt1
+questa/work/@_opt2
+
 quartus/SYN/db
 quartus/SYN/incremental_db/
+quartus/SYN/greybox_tmp

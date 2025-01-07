@@ -1,0 +1,112 @@
+﻿/*@!Encoding:65001*/
+// Copyright (c) 2024 Vector Informatik GmbH  
+
+// Permission is hereby granted, free of charge, to any person obtaining  
+// a copy of this software and associated documentation files (the  
+// "Software"), to deal in the Software without restriction, including  
+// without limitation the rights to use, copy, modify, merge, publish,  
+// distribute, sublicense, and/or sell copies of the Software, and to  
+// permit persons to whom the Software is furnished to do so, subject to  
+// the following conditions:  
+   
+// The above copyright notice and this permission notice shall be  
+// included in all copies or substantial portions of the Software.  
+   
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND  
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE  
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION  
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION  
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+
+
+includes
+{
+}
+
+variables
+{ 
+  msTimer ResetError;
+}
+
+on start
+{
+  // settings for output signals from the user FPGA
+  sysvar::VTS::VT2848_1_Ch25.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch26.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch27.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch28.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch29.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch30.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch31.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch32.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch33.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch34.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch35.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch36.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch37.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch38.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch39.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch40.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch41.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch42.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch43.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch44.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch45.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch46.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch47.SetOutputMode(eVTS2848OutputModePushPull);
+  sysvar::VTS::VT2848_1_Ch48.SetOutputMode(eVTS2848OutputModePushPull);
+  //  
+  sysvar::VTS::VT2848_1_Ch25.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch26.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch27.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch28.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch29.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch30.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch31.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch32.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch33.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch34.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch35.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch36.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch37.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch38.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch39.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch40.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch41.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch42.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch43.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch44.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch45.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch46.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch47.SetCurveType(eVTSCurveTypeUserFPGA);
+  sysvar::VTS::VT2848_1_Ch48.SetCurveType(eVTSCurveTypeUserFPGA);
+  //
+  // signals A & B change both from low (default in the FPGA) to high (start position) at the same time in the FPGA
+  // this causes a false Error message in the FPGA at measurement start; therefore a reset at measurement start is sent
+  @sysvar::VTS::VT2848_1_Ch1::ResetError = 1;
+  @sysvar::VTS::VT2848_1_Ch4::ResetError = 1;
+  @sysvar::VTS::VT2848_1_Ch7::ResetError = 1;
+  @sysvar::VTS::VT2848_1_Ch10::ResetError = 1;
+  @sysvar::VTS::VT2848_1_Ch13::ResetError = 1;
+  @sysvar::VTS::VT2848_1_Ch16::ResetError = 1;
+  @sysvar::VTS::VT2848_1_Ch19::ResetError = 1;
+  @sysvar::VTS::VT2848_1_Ch22::ResetError = 1;
+  //
+  setTimer(ResetError, 10);
+}
+
+//
+
+on timer ResetError
+{
+  @sysvar::VTS::VT2848_1_Ch1::ResetError = 0;
+  @sysvar::VTS::VT2848_1_Ch4::ResetError = 0;
+  @sysvar::VTS::VT2848_1_Ch7::ResetError = 0;
+  @sysvar::VTS::VT2848_1_Ch10::ResetError = 0;
+  @sysvar::VTS::VT2848_1_Ch13::ResetError = 0;
+  @sysvar::VTS::VT2848_1_Ch16::ResetError = 0;
+  @sysvar::VTS::VT2848_1_Ch19::ResetError = 0;
+  @sysvar::VTS::VT2848_1_Ch22::ResetError = 0;
+}

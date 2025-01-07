@@ -1,0 +1,54 @@
+﻿/*@!Encoding:65001*/
+// Copyright (c) 2024 Vector Informatik GmbH  
+
+// Permission is hereby granted, free of charge, to any person obtaining  
+// a copy of this software and associated documentation files (the  
+// "Software"), to deal in the Software without restriction, including  
+// without limitation the rights to use, copy, modify, merge, publish,  
+// distribute, sublicense, and/or sell copies of the Software, and to  
+// permit persons to whom the Software is furnished to do so, subject to  
+// the following conditions:  
+   
+// The above copyright notice and this permission notice shall be  
+// included in all copies or substantial portions of the Software.  
+   
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND  
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE  
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION  
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION  
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+
+
+includes
+{ 
+}
+
+variables
+{ 
+}
+
+// the frequency value in the user FPGA interface is for the states in the teeth
+// for the frequency of the teeth which is equal to the PWM frequency the following calculation is needed:
+// Frequency_FPGA = Frequnecy * StatesPerTooth
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_1 { @sysvar::VTS::VT2848_1_Ch25::Frequency = @this * @sysvar::VTS::VT2848_1_Ch25::StatesPerTooth; }
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_2 { @sysvar::VTS::VT2848_1_Ch28::Frequency = @this * @sysvar::VTS::VT2848_1_Ch28::StatesPerTooth; }
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_3 { @sysvar::VTS::VT2848_1_Ch31::Frequency = @this * @sysvar::VTS::VT2848_1_Ch31::StatesPerTooth; }
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_4 { @sysvar::VTS::VT2848_1_Ch34::Frequency = @this * @sysvar::VTS::VT2848_1_Ch34::StatesPerTooth; }
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_5 { @sysvar::VTS::VT2848_1_Ch37::Frequency = @this * @sysvar::VTS::VT2848_1_Ch37::StatesPerTooth; }
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_6 { @sysvar::VTS::VT2848_1_Ch40::Frequency = @this * @sysvar::VTS::VT2848_1_Ch40::StatesPerTooth; }
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_7 { @sysvar::VTS::VT2848_1_Ch43::Frequency = @this * @sysvar::VTS::VT2848_1_Ch43::StatesPerTooth; }
+on sysvar sysvar::IncrementalEncoder::Frequency.Frequency_8 { @sysvar::VTS::VT2848_1_Ch46::Frequency = @this * @sysvar::VTS::VT2848_1_Ch46::StatesPerTooth; }
+
+
+// the user FPGA project counts all edges and a period consists of 4 edges (2 for signal A and 2 for signal B)
+// therefore the position value from the FPGA must be divided by 4 to get the correct tooth
+on sysvar sysvar::VTS::VT2848_1_Ch1::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_1 = @this / 4; }
+on sysvar sysvar::VTS::VT2848_1_Ch4::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_2 = @this / 4; }
+on sysvar sysvar::VTS::VT2848_1_Ch7::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_3 = @this / 4; }
+on sysvar sysvar::VTS::VT2848_1_Ch10::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_4 = @this / 4; }
+on sysvar sysvar::VTS::VT2848_1_Ch13::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_5 = @this / 4; }
+on sysvar sysvar::VTS::VT2848_1_Ch16::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_6 = @this / 4; }
+on sysvar sysvar::VTS::VT2848_1_Ch19::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_7 = @this / 4; }
+on sysvar sysvar::VTS::VT2848_1_Ch22::Position { @sysvar::IncrementalEncoder::Tooth.Tooth_8 = @this / 4; }

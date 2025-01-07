@@ -10,6 +10,10 @@ Here are the different IP blocks that can be used for user FPGA projects. There 
 
 In this folder are files which are used by multiple projects, e.g. common packages.
 
+## Incremental Encoder
+
+This project contains VHDL code for the Quadrature Decoder and Encoder of an Incremental Encoder.
+
 ## Phase Accumulator
 
 This project is a phase accumultor. It can be used to output frequency dependent signals without the need to convert the frequency to FPGA clock cycles.
@@ -21,3 +25,4 @@ This project shows how to implement a RAM in the user FPGA with two parallel wri
 ## Measurement
 
 This project contains VHDL blocks that are used for measurement purposes of digital and analog input signals.
+
