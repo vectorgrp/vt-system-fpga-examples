@@ -13,11 +13,11 @@ The *CANoe demos* folder (table below) includes a CANoe demo and additional VHDL
 | Name | Current Version | Date | Projects | CANoe Demos | Infos |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Common Source Files | 1.0 | 2024-07-09 | [Project](/Projects/CommonSourceFiles/) | - |  |
-| RAM Two Port | 1.0 | 2024-07-09 | [Project](/Projects/PhaseAccumulator/) | [VT5838](/CANoeDemos/RAMTwoPort/) |  |
-| Phase Accumulator | 1.0 | 2024-07-12 | [Project](/Projects/PhaseAccumulator/) | [VT5838](/CANoeDemos/PhaseAccumulator/) |  |
-| Measurement | 1.0| 2024-07-26 | [Project](/Projects/Measurement/) | [VT5838](/CANoeDemos/Measurement/) |  |
 | Full PWM | 1.0 | 2024-08-16 | - | [VT2848](/CANoeDemos/FullPWM/) | uses all 48 channels for PWM output & measurement |
 | Incremental Encoder | 1.0 | 2025-01-07 | [Project](/Projects/IncrementalEncoder/) | [VT2848](/CANoeDemos/IncrementalEncoder/) |  |
+| Measurement | 1.0| 2024-07-26 | [Project](/Projects/Measurement/) | [VT5838](/CANoeDemos/Measurement/) |  |
+| Phase Accumulator | 1.0 | 2024-07-12 | [Project](/Projects/PhaseAccumulator/) | [VT5838](/CANoeDemos/PhaseAccumulator/) |  |
+| RAM Two Port | 1.0 | 2024-07-09 | [Project](/Projects/PhaseAccumulator/) | [VT5838](/CANoeDemos/RAMTwoPort/) |  |
 
 ## Issues
 
