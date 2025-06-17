@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="Control">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xe13ef5c2ec2abe420be9313e123bc72ca084" ControlName="Group Box 12">
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xe7ec5f71e5d50e4c11eaf59e8c3e015abd0b" ControlName="Static Text 17">
+        <Property Name="Name">Xe7ec5f71e5d50e4c11eaf59e8c3e015abd0b</Property>
+        <Property Name="Size">835, 177</Property>
+        <Property Name="Location">5, 22</Property>
+        <Property Name="Text">Download:
+1. set the voltage [V] that should be output on a channel (13-16) in 'Data Download [V]'
+2. download the voltage into the FIFO of the channel by pressing 'Download'
+3. output the oldest voltage value in the FIFO and remove it from the FIFO
+
+'is Empty' shows when the FIFO is empty. 'is Full' shows when the FIFO is full. 'Number of Words' and the bar on the right show the current number of values ion the FIFO.
+
+
+Upload:
+1. write the current input value of a channel (1-4) into the FIFO using the 'Store Upload' button
+2. upload the oldest data in the FIFO to CANoe und remove it from the FIFO using the 'Upload' button
+3. the data uploaded to CANoe is 'Data Upload [V]'
+
+'is Empty' shows when the FIFO is empty. 'is Full' shows when the FIFO is full. 'Number of Words' and the bar on the right show the current number of values ion the FIFO.</Property>
+      </Object>
+      <Property Name="Name">Xe13ef5c2ec2abe420be9313e123bc72ca084</Property>
+      <Property Name="Size">853, 209</Property>
+      <Property Name="Location">5, 464</Property>
+      <Property Name="Text">Description</Property>
+      <Property Name="TabIndex">0</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xc0317fdae4461e46a8e9309e9982fccf749a" ControlName="Group Box 11">
+      <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xfccdc721eeb1ce4530eb893e86dcc95d1b3d" ControlName="Picture Box 1">
+        <Property Name="Name">Xfccdc721eeb1ce4530eb893e86dcc95d1b3d</Property>
+        <Property Name="Size">251, 826</Property>
+        <Property Name="Location">5, 19</Property>
+        <Property Name="TransparentColor">255, 255, 255, 255</Property>
+        <Property Name="ImageFile">Connection.png</Property>
+      </Object>
+      <Property Name="Name">Xc0317fdae4461e46a8e9309e9982fccf749a</Property>
+      <Property Name="Size">262, 851</Property>
+      <Property Name="Location">1143, 5</Property>
+      <Property Name="Text">Connection</Property>
+      <Property Name="TabIndex">0</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X824c46d0ef43be4cbde9eb0e059377948555" ControlName="Group Box 6">
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xb0a06b0fe19c4e4ca2e9ed5e4a5caac7d9f2" ControlName="Group Box 10">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xce29a728e2f6ce449fe8ad5ec5c268f4edb1" ControlName="Progress Bar 8">
+          <Property Name="Name">Xce29a728e2f6ce449fe8ad5ec5c268f4edb1</Property>
+          <Property Name="Size">55, 166</Property>
+          <Property Name="Location">202, 19</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch4;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X323b7759e946ce496ee9de4e3022a9e64865" ControlName="Input/Output Box 16">
+          <Property Name="Name">X323b7759e946ce496ee9de4e3022a9e64865</Property>
+          <Property Name="Size">183, 21</Property>
+          <Property Name="Location">13, 164</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Upload [V]:</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">86, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch4;;;DataUpload;2;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X8d839875edacae46afe8489e6c2d9144aa4c" ControlName="Button 16">
+          <Property Name="Name">X8d839875edacae46afe8489e6c2d9144aa4c</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 135</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch4;;;Upload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X0c1fe91de5e6ee4013e9525eb7f7a6a9ba51" ControlName="Input/Output Box 15">
+          <Property Name="Name">X0c1fe91de5e6ee4013e9525eb7f7a6a9ba51</Property>
+          <Property Name="Size">176, 21</Property>
+          <Property Name="Location">20, 48</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Num of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">79, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch4;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X8578b3efe617fe4744eb1f6ea2c87c291bda" ControlName="Static Text 16">
+          <Property Name="Name">X8578b3efe617fe4744eb1f6ea2c87c291bda</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">56, 105</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X784954d3edee3e4e6be96cae503d47469f98" ControlName="LED Control 16">
+          <Property Name="Name">X784954d3edee3e4e6be96cae503d47469f98</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 105</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch4;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X75997d1ae57a3e44a6e8593e1476d6ea6fad" ControlName="Static Text 15">
+          <Property Name="Name">X75997d1ae57a3e44a6e8593e1476d6ea6fad</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">42, 75</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X268330ecebec1e42f4e99aaef1398c2ea520" ControlName="LED Control 15">
+          <Property Name="Name">X268330ecebec1e42f4e99aaef1398c2ea520</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 75</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch4;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X7928d75ce3622e4ac0ebf1bee163a2bea646" ControlName="Button 15">
+          <Property Name="Name">X7928d75ce3622e4ac0ebf1bee163a2bea646</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 19</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Store Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch4;;;StoreUpload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">Xb0a06b0fe19c4e4ca2e9ed5e4a5caac7d9f2</Property>
+        <Property Name="Size">276, 192</Property>
+        <Property Name="Location">851, 26</Property>
+        <Property Name="Text">Channel 4</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X17276bc4e8098e41dbea99be54d849c31f4a" ControlName="Group Box 9">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xb8886410e8448e4139eb80bef3cb5194b3b1" ControlName="Progress Bar 7">
+          <Property Name="Name">Xb8886410e8448e4139eb80bef3cb5194b3b1</Property>
+          <Property Name="Size">55, 166</Property>
+          <Property Name="Location">202, 19</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch3;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X1b256d47e278ae43ede8cc7e401bc7495fad" ControlName="Input/Output Box 14">
+          <Property Name="Name">X1b256d47e278ae43ede8cc7e401bc7495fad</Property>
+          <Property Name="Size">183, 21</Property>
+          <Property Name="Location">13, 164</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Upload [V]:</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">86, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch3;;;DataUpload;2;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X2f72539ee8511e4e7de978be2bc26ecf54e3" ControlName="Button 14">
+          <Property Name="Name">X2f72539ee8511e4e7de978be2bc26ecf54e3</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 135</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch3;;;Upload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X918d0032e09aee481deb0eae436c870660ed" ControlName="Input/Output Box 13">
+          <Property Name="Name">X918d0032e09aee481deb0eae436c870660ed</Property>
+          <Property Name="Size">176, 21</Property>
+          <Property Name="Location">20, 48</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Num of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">79, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch3;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xc0dfb9c8eb2b5e4110ebe4fe8524dc86a30f" ControlName="Static Text 14">
+          <Property Name="Name">Xc0dfb9c8eb2b5e4110ebe4fe8524dc86a30f</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">56, 105</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xf646fd50e8db5e4334eb408e1356d8777d7d" ControlName="LED Control 14">
+          <Property Name="Name">Xf646fd50e8db5e4334eb408e1356d8777d7d</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 105</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch3;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X01c4a48fe5daae4eefe99c3ec466d0582c6f" ControlName="Static Text 13">
+          <Property Name="Name">X01c4a48fe5daae4eefe99c3ec466d0582c6f</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">42, 75</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xdffa0afdea533e4735e9563e0f767a99c10f" ControlName="LED Control 13">
+          <Property Name="Name">Xdffa0afdea533e4735e9563e0f767a99c10f</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 75</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch3;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xc57a1746e91dce48f0ea55ce70273a009040" ControlName="Button 13">
+          <Property Name="Name">Xc57a1746e91dce48f0ea55ce70273a009040</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 19</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Store Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch3;;;StoreUpload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">X17276bc4e8098e41dbea99be54d849c31f4a</Property>
+        <Property Name="Size">276, 192</Property>
+        <Property Name="Location">569, 26</Property>
+        <Property Name="Text">Channel 3</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X5078a024e5650e4dffeb612e43003e987688" ControlName="Group Box 8">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X5d839aa1e4a37e4d00ebefde52015989c26c" ControlName="Progress Bar 6">
+          <Property Name="Name">X5d839aa1e4a37e4d00ebefde52015989c26c</Property>
+          <Property Name="Size">55, 166</Property>
+          <Property Name="Location">202, 19</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch2;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X33953b75ee3fae4931eb954e2d8a73bd14af" ControlName="Input/Output Box 12">
+          <Property Name="Name">X33953b75ee3fae4931eb954e2d8a73bd14af</Property>
+          <Property Name="Size">183, 21</Property>
+          <Property Name="Location">13, 164</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Upload [V]:</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">86, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch2;;;DataUpload;2;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X0c0ba02ced094e4ea9ebd8ae79e25f40e622" ControlName="Button 12">
+          <Property Name="Name">X0c0ba02ced094e4ea9ebd8ae79e25f40e622</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 135</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch2;;;Upload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X34d81e42e0c65e41f6ebeabeeb6bdff633dc" ControlName="Input/Output Box 11">
+          <Property Name="Name">X34d81e42e0c65e41f6ebeabeeb6bdff633dc</Property>
+          <Property Name="Size">176, 21</Property>
+          <Property Name="Location">20, 48</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Num of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">79, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch2;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X8af02201e1a6ce4555e8aabe0001fcdb896c" ControlName="Static Text 12">
+          <Property Name="Name">X8af02201e1a6ce4555e8aabe0001fcdb896c</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">56, 105</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xa00624efefb2be4a9de9b13ebbd8a629ce6b" ControlName="LED Control 12">
+          <Property Name="Name">Xa00624efefb2be4a9de9b13ebbd8a629ce6b</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 105</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch2;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X3f9306a6e6016e47ece8223ead284240853a" ControlName="Static Text 11">
+          <Property Name="Name">X3f9306a6e6016e47ece8223ead284240853a</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">42, 75</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xb21bf064e2395e4877ea720ee0538c6d67cb" ControlName="LED Control 11">
+          <Property Name="Name">Xb21bf064e2395e4877ea720ee0538c6d67cb</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 75</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch2;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xc2482babe0bcce4c64e990fe1f9e7f31bc8b" ControlName="Button 11">
+          <Property Name="Name">Xc2482babe0bcce4c64e990fe1f9e7f31bc8b</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 19</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Store Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch2;;;StoreUpload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">X5078a024e5650e4dffeb612e43003e987688</Property>
+        <Property Name="Size">276, 192</Property>
+        <Property Name="Location">287, 26</Property>
+        <Property Name="Text">Channel 2</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X78e0242be0720e46c1e8bc2e44bd3096fdcd" ControlName="Group Box 7">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X72b92451e393ee4d13e99f5e8336f4498e29" ControlName="Progress Bar 5">
+          <Property Name="Name">X72b92451e393ee4d13e99f5e8336f4498e29</Property>
+          <Property Name="Size">55, 166</Property>
+          <Property Name="Location">202, 19</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch1;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xaecd64fced9b8e43f2e8643e3e5003605724" ControlName="Input/Output Box 10">
+          <Property Name="Name">Xaecd64fced9b8e43f2e8643e3e5003605724</Property>
+          <Property Name="Size">183, 21</Property>
+          <Property Name="Location">13, 164</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Upload [V]:</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">86, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch1;;;DataUpload;2;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X9316072ae190ce4de1eb6f2e384461384d9d" ControlName="Button 10">
+          <Property Name="Name">X9316072ae190ce4de1eb6f2e384461384d9d</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 135</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch1;;;Upload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X48ff43bde6068e434ae80ccef7699c90ca04" ControlName="Input/Output Box 9">
+          <Property Name="Name">X48ff43bde6068e434ae80ccef7699c90ca04</Property>
+          <Property Name="Size">176, 21</Property>
+          <Property Name="Location">20, 48</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Num of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">79, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch1;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X05b3440aeed6ae40e8e8248ea04550555148" ControlName="Static Text 10">
+          <Property Name="Name">X05b3440aeed6ae40e8e8248ea04550555148</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">56, 105</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X967722f3e9dbee4552e8d7aee124e90a2041" ControlName="LED Control 10">
+          <Property Name="Name">X967722f3e9dbee4552e8d7aee124e90a2041</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 105</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch1;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X65b4ac1fe1ee0e4e07e8defea0cd493db092" ControlName="Static Text 9">
+          <Property Name="Name">X65b4ac1fe1ee0e4e07e8defea0cd493db092</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">42, 75</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X696ec205ecd12e44c8ea4d8ea00fc104878c" ControlName="LED Control 9">
+          <Property Name="Name">X696ec205ecd12e44c8ea4d8ea00fc104878c</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">99, 75</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch1;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X5b4e5ce1e335de464ce8334efc380b3de818" ControlName="Button 9">
+          <Property Name="Name">X5b4e5ce1e335de464ce8334efc380b3de818</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">99, 19</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Store Upload</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch1;;;StoreUpload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">X78e0242be0720e46c1e8bc2e44bd3096fdcd</Property>
+        <Property Name="Size">276, 192</Property>
+        <Property Name="Location">5, 26</Property>
+        <Property Name="Text">Channel 1</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Property Name="Name">X824c46d0ef43be4cbde9eb0e059377948555</Property>
+      <Property Name="Size">1132, 224</Property>
+      <Property Name="Location">5, 234</Property>
+      <Property Name="Text">Upload (Input)</Property>
+      <Property Name="TabIndex">0</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X1515e200ef410e418cea6a5e93c204d01172" ControlName="Group Box 1">
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X6142aa57e74b6e409fead50e6c8318f898e0" ControlName="Group Box 5">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X152d7225ed363e45d1ebb58e48ed87df18ba" ControlName="Progress Bar 4">
+          <Property Name="Name">X152d7225ed363e45d1ebb58e48ed87df18ba</Property>
+          <Property Name="Size">47, 166</Property>
+          <Property Name="Location">218, 25</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch16;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xef9d524ce0e12e4780e8d71e2afb0605106c" ControlName="Button 8">
+          <Property Name="Name">Xef9d524ce0e12e4780e8d71e2afb0605106c</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">115, 168</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Send</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch16;;;Send;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xd3bb3ee2e7e66e41abebff9e5431a81173b1" ControlName="Input/Output Box 8">
+          <Property Name="Name">Xd3bb3ee2e7e66e41abebff9e5431a81173b1</Property>
+          <Property Name="Size">191, 21</Property>
+          <Property Name="Location">21, 81</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Number of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">94, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch16;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X7b4fd3a6e995fe46cde901fe5014e845f7ee" ControlName="Static Text 8">
+          <Property Name="Name">X7b4fd3a6e995fe46cde901fe5014e845f7ee</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">72, 138</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X5fdee332e564ae4d37eb310e200921c78cbb" ControlName="LED Control 8">
+          <Property Name="Name">X5fdee332e564ae4d37eb310e200921c78cbb</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">115, 138</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch16;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X08f4c625edafde420ceafbdee2dfba89ca33" ControlName="Static Text 7">
+          <Property Name="Name">X08f4c625edafde420ceafbdee2dfba89ca33</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">58, 108</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xbd74bc46e0e72e4c89e84a9e187d92dbb665" ControlName="LED Control 7">
+          <Property Name="Name">Xbd74bc46e0e72e4c89e84a9e187d92dbb665</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">115, 108</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch16;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X8e8d09c5e65e6e42ede8979ea9881ecf6d4c" ControlName="Button 7">
+          <Property Name="Name">X8e8d09c5e65e6e42ede8979ea9881ecf6d4c</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">115, 52</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Download</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch16;;;Download;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xb310c053e6ea1e425eeaa81e4b6b4da7da26" ControlName="Input/Output Box 7">
+          <Property Name="Name">Xb310c053e6ea1e425eeaa81e4b6b4da7da26</Property>
+          <Property Name="Size">197, 21</Property>
+          <Property Name="Location">15, 25</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Download [V]:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">100, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch16;;;DataDownload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">X6142aa57e74b6e409fead50e6c8318f898e0</Property>
+        <Property Name="Size">276, 199</Property>
+        <Property Name="Location">851, 19</Property>
+        <Property Name="Text">Channel 16</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xa7754913e46eae4209eb7f3e15ea74929913" ControlName="Group Box 4">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xa4c740f0ebcb4e4189ea3f9e78eb8c68e0eb" ControlName="Progress Bar 3">
+          <Property Name="Name">Xa4c740f0ebcb4e4189ea3f9e78eb8c68e0eb</Property>
+          <Property Name="Size">47, 166</Property>
+          <Property Name="Location">218, 25</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch15;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xce0f9122ed095e4527e8839e6b788c91a7a0" ControlName="Button 6">
+          <Property Name="Name">Xce0f9122ed095e4527e8839e6b788c91a7a0</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">115, 168</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Send</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch15;;;Send;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X3778d2e6e5b55e4964e9ad1edd6dbc70ef61" ControlName="Input/Output Box 6">
+          <Property Name="Name">X3778d2e6e5b55e4964e9ad1edd6dbc70ef61</Property>
+          <Property Name="Size">191, 21</Property>
+          <Property Name="Location">21, 81</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Number of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">94, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch15;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X59753b57e97abe49a7eb65beb46db8b5da76" ControlName="Static Text 6">
+          <Property Name="Name">X59753b57e97abe49a7eb65beb46db8b5da76</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">72, 138</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X0fef097eea8d7e4be1e9509e4313314b206c" ControlName="LED Control 6">
+          <Property Name="Name">X0fef097eea8d7e4be1e9509e4313314b206c</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">115, 138</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch15;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X9d4e71c4ed341e4b99e9763e68ad26bb5ab1" ControlName="Static Text 5">
+          <Property Name="Name">X9d4e71c4ed341e4b99e9763e68ad26bb5ab1</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">58, 108</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xb504b193ee342e4b6deb463eb551e9f9459f" ControlName="LED Control 5">
+          <Property Name="Name">Xb504b193ee342e4b6deb463eb551e9f9459f</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">115, 108</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch15;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X4ee2e6afe5cffe4b4fe9613efa128796886d" ControlName="Button 5">
+          <Property Name="Name">X4ee2e6afe5cffe4b4fe9613efa128796886d</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">115, 52</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Download</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch15;;;Download;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X955337e3eb290e4be8eb600e39540ce50a13" ControlName="Input/Output Box 5">
+          <Property Name="Name">X955337e3eb290e4be8eb600e39540ce50a13</Property>
+          <Property Name="Size">197, 21</Property>
+          <Property Name="Location">15, 25</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Download [V]:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">100, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch15;;;DataDownload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">Xa7754913e46eae4209eb7f3e15ea74929913</Property>
+        <Property Name="Size">276, 199</Property>
+        <Property Name="Location">569, 19</Property>
+        <Property Name="Text">Channel 15</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X1f9773e1efefae46a9e80d9ed5e71c65764a" ControlName="Group Box 3">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X07f7b0dae2951e4d55e8053e15ac929d0f9e" ControlName="Progress Bar 2">
+          <Property Name="Name">X07f7b0dae2951e4d55e8053e15ac929d0f9e</Property>
+          <Property Name="Size">47, 166</Property>
+          <Property Name="Location">218, 25</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch14;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xd928b110e67a5e4bcde91dfe50dabfa8f89a" ControlName="Button 4">
+          <Property Name="Name">Xd928b110e67a5e4bcde91dfe50dabfa8f89a</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">115, 168</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Send</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch14;;;Send;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X78df1892ee402e493ae9e42e91dae33416c8" ControlName="Input/Output Box 4">
+          <Property Name="Name">X78df1892ee402e493ae9e42e91dae33416c8</Property>
+          <Property Name="Size">191, 21</Property>
+          <Property Name="Location">21, 81</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Number of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">94, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch14;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X94916f67e1303e4a79ea118e8fd974e3f5cb" ControlName="Static Text 4">
+          <Property Name="Name">X94916f67e1303e4a79ea118e8fd974e3f5cb</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">72, 138</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xd024935bef87de4eb2e893ee8ea7b343d886" ControlName="LED Control 4">
+          <Property Name="Name">Xd024935bef87de4eb2e893ee8ea7b343d886</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">115, 138</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch14;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X1eea8216ed31fe4403e9486ec273d1b40d24" ControlName="Static Text 3">
+          <Property Name="Name">X1eea8216ed31fe4403e9486ec273d1b40d24</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">58, 108</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X768cde06e59e6e4b47e9e7feaab1459e1279" ControlName="LED Control 3">
+          <Property Name="Name">X768cde06e59e6e4b47e9e7feaab1459e1279</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">115, 108</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch14;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X3591f2fbe76dde429ee90dcedf4fdf35e73a" ControlName="Button 3">
+          <Property Name="Name">X3591f2fbe76dde429ee90dcedf4fdf35e73a</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">115, 52</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Download</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch14;;;Download;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X4e135194e6907e4cc4e9123e53c24719391a" ControlName="Input/Output Box 3">
+          <Property Name="Name">X4e135194e6907e4cc4e9123e53c24719391a</Property>
+          <Property Name="Size">197, 21</Property>
+          <Property Name="Location">15, 25</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Download [V]:</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">100, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch14;;;DataDownload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">X1f9773e1efefae46a9e80d9ed5e71c65764a</Property>
+        <Property Name="Size">276, 199</Property>
+        <Property Name="Location">287, 19</Property>
+        <Property Name="Text">Channel 14</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X40d6af20e0238e4032e9dfce2ea94d9450c4" ControlName="Group Box 2">
+        <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xcebd0f0ee9b47e4730eaa3ceb697034377b1" ControlName="Progress Bar 1">
+          <Property Name="Name">Xcebd0f0ee9b47e4730eaa3ceb697034377b1</Property>
+          <Property Name="Size">47, 166</Property>
+          <Property Name="Location">206, 25</Property>
+          <Property Name="Alignment">RightBottom</Property>
+          <Property Name="DecimalPlaces">0</Property>
+          <Property Name="ValuePos">Right</Property>
+          <Property Name="Orientation">Vertical</Property>
+          <Property Name="AlarmUpperLimit">16</Property>
+          <Property Name="Maximum">16</Property>
+          <Property Name="ValueSize">18, 12</Property>
+          <Property Name="OriginValue">0</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch13;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X574ef998ec0b2e440ae93b1e3db7f4f26d38" ControlName="Button 2">
+          <Property Name="Name">X574ef998ec0b2e440ae93b1e3db7f4f26d38</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">103, 168</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Send</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch13;;;Send;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xf009e6dce63f4e49b1e8e3de2944bf918397" ControlName="Input/Output Box 2">
+          <Property Name="Name">Xf009e6dce63f4e49b1e8e3de2944bf918397</Property>
+          <Property Name="Size">191, 21</Property>
+          <Property Name="Location">9, 81</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Number of Words:</Property>
+          <Property Name="ValueDecimalPlaces">0</Property>
+          <Property Name="ValueDisplay">Decimal</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">94, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch13;;;NumOfWords;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X126b5f52e108be4217e8debe3280696c58be" ControlName="Static Text 2">
+          <Property Name="Name">X126b5f52e108be4217e8debe3280696c58be</Property>
+          <Property Name="Size">37, 15</Property>
+          <Property Name="Location">60, 138</Property>
+          <Property Name="Text">is Full</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X41229e22e9b1ee46d0e8a4be42e2b148eddf" ControlName="LED Control 2">
+          <Property Name="Name">X41229e22e9b1ee46d0e8a4be42e2b148eddf</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">103, 138</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch13;;;IsFull;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X17e6e46dedae2e43dbeb8afe6227c9fedd76" ControlName="Static Text 1">
+          <Property Name="Name">X17e6e46dedae2e43dbeb8afe6227c9fedd76</Property>
+          <Property Name="Size">51, 15</Property>
+          <Property Name="Location">46, 108</Property>
+          <Property Name="Text">is Empty</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X7824f70ce92fde4d96ead38e1a32fd82bae2" ControlName="LED Control 1">
+          <Property Name="Name">X7824f70ce92fde4d96ead38e1a32fd82bae2</Property>
+          <Property Name="Size">24, 24</Property>
+          <Property Name="Location">103, 108</Property>
+          <Property Name="ReadOnlyControl">True</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="TabStopActive">False</Property>
+          <Property Name="SwitchValuesVTXml">&lt;Version&gt;2&lt;/Version&gt;&lt;Count&gt;2&lt;/Count&gt;&lt;RxValue&gt;0&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;0&lt;/TxValue&gt;&lt;Color&gt;255, 152, 152, 152&lt;/Color&gt;&lt;RxValue&gt;1&lt;/RxValue&gt;&lt;LowerUpper&gt;Lower&lt;/LowerUpper&gt;&lt;TxValue&gt;1&lt;/TxValue&gt;&lt;Color&gt;Red&lt;/Color&gt;</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch13;;;IsEmpty;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X948cb905e16e8e44ebea163e5a8bb8d96a78" ControlName="Button 1">
+          <Property Name="Name">X948cb905e16e8e44ebea163e5a8bb8d96a78</Property>
+          <Property Name="Size">97, 23</Property>
+          <Property Name="Location">103, 52</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="Text">Download</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch13;;;Download;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X141cd294e3b0be4223eabd6eb205b2cbcfb9" ControlName="Input/Output Box 1">
+          <Property Name="Name">X141cd294e3b0be4223eabd6eb205b2cbcfb9</Property>
+          <Property Name="Size">195, 21</Property>
+          <Property Name="Location">5, 25</Property>
+          <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+          <Property Name="AlarmLowerBkgColor">Salmon</Property>
+          <Property Name="AlarmLowerTextColor">Black</Property>
+          <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+          <Property Name="AlarmUpperTextColor">Black</Property>
+          <Property Name="BoxBorderStyle">FixedSingle</Property>
+          <Property Name="DisplayLabel">Left</Property>
+          <Property Name="TabIndex">0</Property>
+          <Property Name="DescriptionText">Data Download [v]:</Property>
+          <Property Name="ValueDisplay">Double</Property>
+          <Property Name="UsedValueTable">PhysicalValue</Property>
+          <Property Name="DescriptionSize">98, 21</Property>
+          <Property Name="SymbolConfiguration">8;16;VTS::VT2816_1_Ch13;;;DataDownload;1;;;-1;;;Value;;;0</Property>
+        </Object>
+        <Property Name="Name">X40d6af20e0238e4032e9dfce2ea94d9450c4</Property>
+        <Property Name="Size">276, 199</Property>
+        <Property Name="Location">5, 19</Property>
+        <Property Name="Text">Channel 13</Property>
+        <Property Name="TabIndex">0</Property>
+        <Property Name="UseWindowsStyle">False</Property>
+      </Object>
+      <Property Name="Name">X1515e200ef410e418cea6a5e93c204d01172</Property>
+      <Property Name="Size">1132, 223</Property>
+      <Property Name="Location">5, 5</Property>
+      <Property Name="Text">Download (Output)</Property>
+      <Property Name="TabIndex">0</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">1411, 862</Property>
+    <Property Name="Location">0, 0</Property>
+    <Property Name="BackColor">255, 255, 255, 255</Property>
+  </Object>
+</Panel>
