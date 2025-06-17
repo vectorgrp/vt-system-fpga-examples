@@ -10,9 +10,17 @@ Here are the different IP blocks that can be used for user FPGA projects. There 
 
 In this folder are files which are used by multiple projects, e.g. common packages.
 
+## FIFO
+
+This project contains VHDL code for a FIFO.
+
 ## Incremental Encoder
 
 This project contains VHDL code for the Quadrature Decoder and Encoder of an Incremental Encoder.
+
+## Measurement
+
+This project contains VHDL blocks that are used for measurement purposes of digital and analog input signals.
 
 ## Phase Accumulator
 
@@ -21,8 +29,3 @@ This project is a phase accumultor. It can be used to output frequency dependent
 ## RAM Two Port
 
 This project shows how to implement a RAM in the user FPGA with two parallel write and read port. The size of the RAM, the size of the data and the initialization file (.mif format) can be set as parameters (via generics in the entity).
-
-## Measurement
-
-This project contains VHDL blocks that are used for measurement purposes of digital and analog input signals.
-
