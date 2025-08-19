@@ -1,5 +1,8 @@
 # Measurement
 
+- Version: 1.1
+    - fixed a bug in the frequency/duty cycle measurement code concerning the timeout 
+    - removed TIMEOUT state from the FSM
 - Version: 1.0
 
 ## Changelog

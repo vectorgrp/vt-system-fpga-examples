@@ -1,23 +1,23 @@
--- Copyright (c) 2024 Vector Informatik GmbH  
+-- Copyright (c) 2025 Vector Informatik GmbH
 
--- Permission is hereby granted, free of charge, to any person obtaining  
--- a copy of this software and associated documentation files (the  
--- "Software"), to deal in the Software without restriction, including  
--- without limitation the rights to use, copy, modify, merge, publish,  
--- distribute, sublicense, and/or sell copies of the Software, and to  
--- permit persons to whom the Software is furnished to do so, subject to  
--- the following conditions:  
-   
--- The above copyright notice and this permission notice shall be  
--- included in all copies or substantial portions of the Software.  
-   
--- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
--- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  
--- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND  
--- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE  
--- LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION  
--- OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION  
--- WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+-- Permission is hereby granted, free of charge, to any person obtaining
+-- a copy of this software and associated documentation files (the
+-- "Software"), to deal in the Software without restriction, including
+-- without limitation the rights to use, copy, modify, merge, publish,
+-- distribute, sublicense, and/or sell copies of the Software, and to
+-- permit persons to whom the Software is furnished to do so, subject to
+-- the following conditions:
+
+-- The above copyright notice and this permission notice shall be
+-- included in all copies or substantial portions of the Software.
+
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+-- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+-- LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+-- OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+-- WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 LIBRARY ieee;
@@ -59,7 +59,7 @@ ARCHITECTURE rtl OF Digital_FrequencyDutyCycle IS
 BEGIN  -- rtl
 
   proc_FSM : PROCESS (i_clock, i_reset)
-    TYPE t_FSM IS (IDLE, PULSE, OFF, TIMEOUT);
+    TYPE t_FSM IS (IDLE, PULSE, OFF);
     VARIABLE v_FSM            : t_FSM                           := IDLE;
     VARIABLE v_SignalEdge     : std_logic_vector(1 DOWNTO 0)    := (OTHERS => '0');
     VARIABLE v_PulseCounter   : unsigned(o_PulseCounter'range)  := (OTHERS => '0');
@@ -104,11 +104,6 @@ BEGIN  -- rtl
             v_FSM           := PULSE;
           END IF;
         --
-        WHEN TIMEOUT =>                                             -- wait state
-          IF (v_SignalEdge = c_RisingEdge) THEN
-            v_FSM := PULSE;
-          END IF;
-        --
         WHEN OTHERS =>
           v_FSM := IDLE;
       END CASE;
@@ -123,7 +118,7 @@ BEGIN  -- rtl
         v_TimeoutCounter := v_TimeoutCounter + 1;
       ELSIF (v_TimeoutCounter = unsigned(i_Timeout) - 1) THEN       -- timeout occured
         v_TimeoutCounter := v_TimeoutCounter + 1;                   -- one addtional time so that this state occurs for only one FPGA cycle
-        v_FSM            := TIMEOUT;
+        v_FSM            := IDLE;
         -- set once for one FPGA cycle
         o_NewData        <= '1';
         o_PeriodCounter  <= c_TimeoutValueHigh;                     -- always the high value
