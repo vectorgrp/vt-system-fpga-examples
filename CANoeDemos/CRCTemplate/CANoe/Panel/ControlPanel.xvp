@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Panel" ControlName="ControlPanel">
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X85928041e7612e4601ea515e86760aa45b70" ControlName="Group Box 2">
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xfb9faf35ecd5be4c1fe890de569c6895ecda" ControlName="Static Text 2">
+        <Property Name="Name">Xfb9faf35ecd5be4c1fe890de569c6895ecda</Property>
+        <Property Name="Size">126, 40</Property>
+        <Property Name="Location">50, 21</Property>
+        <Property Name="Text">Polynom: 0x04C11DB7
+Init Value: 0xFFFFFFFF
+XOR Out: 0xFFFFFFFF</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xd6d04e7ee029ce4db6e8276e5ed75a3365b0" ControlName="Button 4">
+        <Property Name="Name">Xd6d04e7ee029ce4db6e8276e5ed75a3365b0</Property>
+        <Property Name="Size">99, 23</Property>
+        <Property Name="Location">50, 118</Property>
+        <Property Name="TabIndex">6</Property>
+        <Property Name="Text">Data Bit Valid</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;DataBitValid_CRC32;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X724a4b85e8e89e47c4eb415e99336a69c93f" ControlName="Button 3">
+        <Property Name="Name">X724a4b85e8e89e47c4eb415e99336a69c93f</Property>
+        <Property Name="Size">99, 23</Property>
+        <Property Name="Location">50, 67</Property>
+        <Property Name="TabIndex">5</Property>
+        <Property Name="Text">Set Init Value</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;SetInitValue_CRC32;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X17a317d9ea175e4f78eaf87e7cf5c093b3bd" ControlName="Input/Output Box 2">
+        <Property Name="Name">X17a317d9ea175e4f78eaf87e7cf5c093b3bd</Property>
+        <Property Name="Size">144, 21</Property>
+        <Property Name="Location">5, 147</Property>
+        <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+        <Property Name="AlarmLowerBkgColor">Salmon</Property>
+        <Property Name="AlarmLowerTextColor">Black</Property>
+        <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+        <Property Name="AlarmUpperTextColor">Black</Property>
+        <Property Name="BoxBorderStyle">FixedSingle</Property>
+        <Property Name="DisplayLabel">Left</Property>
+        <Property Name="TabIndex">4</Property>
+        <Property Name="DescriptionText">CRC32:</Property>
+        <Property Name="ValueDecimalPlaces">0</Property>
+        <Property Name="ValueDisplay">Hexadecimal</Property>
+        <Property Name="UsedValueTable">PhysicalValue</Property>
+        <Property Name="DescriptionSize">45, 21</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;CRC32;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xde00847febb00e46e9e848ee4c177bd5ca13" ControlName="Check Box 2">
+        <Property Name="Name">Xde00847febb00e46e9e848ee4c177bd5ca13</Property>
+        <Property Name="Size">66, 16</Property>
+        <Property Name="Location">5, 96</Property>
+        <Property Name="CheckAlign">MiddleRight</Property>
+        <Property Name="Text">Data Bit</Property>
+        <Property Name="TabIndex">1</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;DataBit_CRC32;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Property Name="Name">X85928041e7612e4601ea515e86760aa45b70</Property>
+      <Property Name="Size">187, 175</Property>
+      <Property Name="Location">169, 5</Property>
+      <Property Name="Text">CRC-32</Property>
+      <Property Name="TabIndex">2</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xdc722d3ce2942e4ac3eb2f3eb813dd752e4d" ControlName="Group Box 1">
+      <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X3258b607ef13de488be906ced7699034a752" ControlName="Static Text 1">
+        <Property Name="Name">X3258b607ef13de488be906ced7699034a752</Property>
+        <Property Name="Size">99, 40</Property>
+        <Property Name="Location">44, 21</Property>
+        <Property Name="Text">Polynom: 0x31
+Init Value: 0xFF
+XOR Out: 0x00</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xc9748a36ef8e1e42f9eb715efc3b4fb66891" ControlName="Button 2">
+        <Property Name="Name">Xc9748a36ef8e1e42f9eb715efc3b4fb66891</Property>
+        <Property Name="Size">99, 23</Property>
+        <Property Name="Location">44, 118</Property>
+        <Property Name="TabIndex">6</Property>
+        <Property Name="Text">Data Bit Valid</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;DataBitValid_CRC8;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X025cdac9eab64e4fcaeb306ea2db8a7c3bac" ControlName="Button 1">
+        <Property Name="Name">X025cdac9eab64e4fcaeb306ea2db8a7c3bac</Property>
+        <Property Name="Size">99, 23</Property>
+        <Property Name="Location">44, 67</Property>
+        <Property Name="TabIndex">5</Property>
+        <Property Name="Text">Set Init Value</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;SetInitValue_CRC8;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="Xb966b258ed4a2e4d97ea661e7b72e779f1c7" ControlName="Input/Output Box 1">
+        <Property Name="Name">Xb966b258ed4a2e4d97ea661e7b72e779f1c7</Property>
+        <Property Name="Size">138, 21</Property>
+        <Property Name="Location">5, 147</Property>
+        <Property Name="AlarmGeneralSettings">1;2;0;100</Property>
+        <Property Name="AlarmLowerBkgColor">Salmon</Property>
+        <Property Name="AlarmLowerTextColor">Black</Property>
+        <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+        <Property Name="AlarmUpperTextColor">Black</Property>
+        <Property Name="BoxBorderStyle">FixedSingle</Property>
+        <Property Name="DisplayLabel">Left</Property>
+        <Property Name="TabIndex">4</Property>
+        <Property Name="DescriptionText">CRC8:</Property>
+        <Property Name="ValueDecimalPlaces">0</Property>
+        <Property Name="ValueDisplay">Hexadecimal</Property>
+        <Property Name="UsedValueTable">PhysicalValue</Property>
+        <Property Name="DescriptionSize">39, 21</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;CRC8;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=18.0.150.0, Culture=neutral, PublicKeyToken=null" Name="X5a30f6f5e09f1e44f7ebf74eb889828dae1a" ControlName="Check Box 1">
+        <Property Name="Name">X5a30f6f5e09f1e44f7ebf74eb889828dae1a</Property>
+        <Property Name="Size">66, 16</Property>
+        <Property Name="Location">5, 96</Property>
+        <Property Name="CheckAlign">MiddleRight</Property>
+        <Property Name="Text">Data Bit</Property>
+        <Property Name="TabIndex">1</Property>
+        <Property Name="SymbolConfiguration">8;16;VTS::VT2710_1;;;DataBit_CRC8;1;;;-1;;;Value;;;0</Property>
+      </Object>
+      <Property Name="Name">Xdc722d3ce2942e4ac3eb2f3eb813dd752e4d</Property>
+      <Property Name="Size">158, 175</Property>
+      <Property Name="Location">5, 5</Property>
+      <Property Name="Text">CRC-8</Property>
+      <Property Name="TabIndex">1</Property>
+      <Property Name="UseWindowsStyle">False</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">363, 189</Property>
+    <Property Name="Location">0, 0</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>

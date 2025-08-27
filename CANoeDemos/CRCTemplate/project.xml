@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project TargetModuleType="VT2710" Workflow="1" FPGAClockFrequency="0" FPGAVariant="0" ReadBlockUpdateTimeUs="1000" ReadBlockUpdateTimeMs="1" Comment="1. Polynom: x^8 + x^5 + x^4 + 1 (CRC-8;  0x31)&#xD;&#xA;2. Polynom: x^32 + x^26 + x^23 + x^22 + x^16 + x^12 + x^11 + x^10 + x^8 + x^7 + x^5 + x^4 + x^2 + x^1 + 1 (CRC-32; 0x04C11DB7)" Version="3" EnableIBC="false" EnableIBCPlus="false" IBCMaster="">
+  <Sysvars>
+    <Sysvar Name="DataBit_CRC8" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+    <Sysvar Name="DataBitValid_CRC8" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+    <Sysvar Name="SetInitValue_CRC8" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+    <Sysvar Name="CRC8" IsOutput="false" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+    <Sysvar Name="DataBit_CRC32" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+    <Sysvar Name="DataBitValid_CRC32" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+    <Sysvar Name="SetInitValue_CRC32" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+    <Sysvar Name="CRC32" IsOutput="false" Bits="32" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="0" TimeStamp="0" />
+  </Sysvars>
+</Project>
