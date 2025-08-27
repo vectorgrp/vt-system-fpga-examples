@@ -13,6 +13,7 @@ The *CANoe demos* folder (table below) includes a CANoe demo and additional VHDL
 | Name | Current Version | Date | Projects | CANoe Demos | Infos |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Common Source Files | 1.0 | 2024-07-09 | [Project](/Projects/CommonSourceFiles/) | - |  |
+| CRC Template | 1.0 | 2025-08-27 | [Project](/Projects/CRCTemplate/) | [VT2710](/CANoeDemos/CRCTemplate/) |  |
 | Full PWM | 1.0 | 2024-08-16 | - | [VT2848](/CANoeDemos/FullPWM/) | uses all 48 channels for PWM output & measurement |
 | FIFO | 1.0 | 2025-06-17 | [Project](/Projects/FIFO/) | [VT2816](/CANoeDemos/FIFO/) |  |
 | Incremental Encoder | 1.0 | 2025-01-07 | [Project](/Projects/IncrementalEncoder/) | [VT2848](/CANoeDemos/IncrementalEncoder/) |  |
