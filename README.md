@@ -27,6 +27,10 @@ Bugs, glitches, notes and requests can be specified under [Issues](https://githu
 
 ## Changelog
 
+### Version 1.3.0 (2025-08-27)
+
+- added 'CRC Template' (project & demo)
+
 ### Version 1.2.1 (2025-08-19)
 
 - fixed a bug in the Freq/DC measurement of the 'Measurement' project
