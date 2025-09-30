@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project TargetModuleType="VT2710" Workflow="1" FPGAClockFrequency="0" FPGAVariant="0" ReadBlockUpdateTimeUs="1000" ReadBlockUpdateTimeMs="1" Comment="" Version="3" EnableIBC="false" EnableIBCPlus="false" IBCMaster="">
+  <Sysvars>
+    <Sysvar Name="SensorAddress_1" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="10" Channel="11" TimeStamp="0" />
+    <Sysvar Name="SensorAddress_2" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="11" Channel="11" TimeStamp="0" />
+    <Sysvar Name="SensorAddress_3" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="12" Channel="11" TimeStamp="0" />
+    <Sysvar Name="SensorAddress_4" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="13" Channel="11" TimeStamp="0" />
+    <Sysvar Name="SensorAddress_5" IsOutput="true" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="14" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataIn_1" IsOutput="false" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataIn_2" IsOutput="false" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataIn_3" IsOutput="false" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataIn_4" IsOutput="false" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataIn_5" IsOutput="false" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataOut_1" IsOutput="true" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataOut_2" IsOutput="true" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataOut_3" IsOutput="true" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataOut_4" IsOutput="true" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterDataOut_5" IsOutput="true" Bits="16" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterAddress_1" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="0" Max="127" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterAddress_2" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="0" Max="127" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterAddress_3" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="0" Max="127" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterAddress_4" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="0" Max="127" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterAddress_5" IsOutput="true" Bits="8" Datatype="0" Factor="" Offset="" Min="0" Max="127" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterWren_1" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterWren_2" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterWren_3" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterWren_4" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+    <Sysvar Name="RegisterWren_5" IsOutput="true" Bits="1" Datatype="0" Factor="" Offset="" Min="" Max="" DefaultValue="0" Channel="11" TimeStamp="0" />
+  </Sysvars>
+</Project>

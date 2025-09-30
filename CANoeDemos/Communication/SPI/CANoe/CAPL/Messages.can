@@ -1,0 +1,122 @@
+﻿/*@!Encoding:65001*/
+includes
+{
+}
+
+variables
+{ 
+}
+
+// write command
+
+// sensor 1
+on sysvar sysvarMember::MasterSPI::WriteMessage_1.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave1::WriteFrame_Stim.TxTrigger = @this;
+    @sysvarMember::SENSOR::SPI::Master::Slave1::WriteFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::WriteMessage_1.Address;
+    @sysvarMember::SENSOR::SPI::Master::Slave1::WriteFrame_Stim.Data = @sysvarMember::MasterSPI::WriteMessage_1.Data;
+  }
+}
+
+// sensor 2
+on sysvar sysvarMember::MasterSPI::WriteMessage_2.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave2::WriteFrame_Stim.TxTrigger = @this;
+    @sysvarMember::SENSOR::SPI::Master::Slave2::WriteFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::WriteMessage_2.Address;
+    @sysvarMember::SENSOR::SPI::Master::Slave2::WriteFrame_Stim.Data = @sysvarMember::MasterSPI::WriteMessage_2.Data;
+  }
+}
+
+// sensor 3
+on sysvar sysvarMember::MasterSPI::WriteMessage_3.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave3::WriteFrame_Stim.TxTrigger = @this;
+    @sysvarMember::SENSOR::SPI::Master::Slave3::WriteFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::WriteMessage_3.Address;
+    @sysvarMember::SENSOR::SPI::Master::Slave3::WriteFrame_Stim.Data = @sysvarMember::MasterSPI::WriteMessage_3.Data;
+  }
+}
+
+// sensor 4
+on sysvar sysvarMember::MasterSPI::WriteMessage_4.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave4::WriteFrame_Stim.TxTrigger = @this;
+    @sysvarMember::SENSOR::SPI::Master::Slave4::WriteFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::WriteMessage_4.Address;
+    @sysvarMember::SENSOR::SPI::Master::Slave4::WriteFrame_Stim.Data = @sysvarMember::MasterSPI::WriteMessage_4.Data;
+  }
+}
+
+// sensor 5
+on sysvar sysvarMember::MasterSPI::WriteMessage_5.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave5::WriteFrame_Stim.TxTrigger = @this;
+    @sysvarMember::SENSOR::SPI::Master::Slave5::WriteFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::WriteMessage_5.Address;
+    @sysvarMember::SENSOR::SPI::Master::Slave5::WriteFrame_Stim.Data = @sysvarMember::MasterSPI::WriteMessage_5.Data;
+  }
+}
+
+// read command
+
+// sensor 1
+on sysvar sysvarMember::MasterSPI::ReadMessage_1.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave1::ReadFrame_Stim.TxTrigger = @this;
+    // + 128 is needed because the MSB of the address is the write/read command bit
+    @sysvarMember::SENSOR::SPI::Master::Slave1::ReadFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::ReadMessage_1.Address + 128;
+  }
+}
+
+// sensor 2
+on sysvar sysvarMember::MasterSPI::ReadMessage_2.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave2::ReadFrame_Stim.TxTrigger = @this;
+    // + 128 is needed because the MSB of the address is the write/read command bit
+    @sysvarMember::SENSOR::SPI::Master::Slave2::ReadFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::ReadMessage_2.Address + 128;
+  }
+}
+
+// sensor 3
+on sysvar sysvarMember::MasterSPI::ReadMessage_3.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave3::ReadFrame_Stim.TxTrigger = @this;
+    // + 128 is needed because the MSB of the address is the write/read command bit
+    @sysvarMember::SENSOR::SPI::Master::Slave3::ReadFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::ReadMessage_3.Address + 128;
+  }
+}
+
+// sensor 4
+on sysvar sysvarMember::MasterSPI::ReadMessage_4.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave4::ReadFrame_Stim.TxTrigger = @this;
+    // + 128 is needed because the MSB of the address is the write/read command bit
+    @sysvarMember::SENSOR::SPI::Master::Slave4::ReadFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::ReadMessage_4.Address + 128;
+  }
+}
+
+// sensor 5
+on sysvar sysvarMember::MasterSPI::ReadMessage_5.Trigger
+{
+  if(@this)
+  {
+    @sysvarMember::SENSOR::SPI::Master::Slave5::ReadFrame_Stim.TxTrigger = @this;
+    // + 128 is needed because the MSB of the address is the write/read command bit
+    @sysvarMember::SENSOR::SPI::Master::Slave5::ReadFrame_Stim.RegisterAddress = @sysvarMember::MasterSPI::ReadMessage_5.Address + 128;
+  }
+}

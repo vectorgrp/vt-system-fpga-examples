@@ -39,7 +39,7 @@
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:03:59  OCTOBER 15, 2012"
-set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
 set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 # Pin & Location Assignments
@@ -399,3 +399,4 @@ set_global_assignment -name VHDL_FILE ../HDL/user/vt2848_dsp_user_scale_pack.vhd
 set_global_assignment -name VHDL_FILE ../HDL/user/vt2848_dsp_user.vhd
 set_global_assignment -name SDC_FILE VTxxxx_dsp_user.sdc
 set_global_assignment -name VHDL_FILE ../../hdl/IncrementalEncoder_GN.vhd
+set_global_assignment -name VHDL_FILE ../../hdl/LPM_Divider_32Bit_unsigned.vhd

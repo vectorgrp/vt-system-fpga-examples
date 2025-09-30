@@ -13,10 +13,11 @@ The *CANoe demos* folder (table below) includes a CANoe demo and additional VHDL
 | Name | Current Version | Date | Projects | CANoe Demos | Infos |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Common Source Files | 1.0 | 2024-07-09 | [Project](/Projects/CommonSourceFiles/) | - |  |
+| Communication | 1.0 | 2025-09-30 | [Project](/Projects/Communication/) | [VT2710](/CANoeDemos/Communication/) | I<sup>2</sup>C, SPI, UART |
 | CRC Template | 1.0 | 2025-08-27 | [Project](/Projects/CRCTemplate/) | [VT2710](/CANoeDemos/CRCTemplate/) |  |
 | Full PWM | 1.0 | 2024-08-16 | - | [VT2848](/CANoeDemos/FullPWM/) | uses all 48 channels for PWM output & measurement |
 | FIFO | 1.0 | 2025-06-17 | [Project](/Projects/FIFO/) | [VT2816](/CANoeDemos/FIFO/) |  |
-| Incremental Encoder | 1.0 | 2025-01-07 | [Project](/Projects/IncrementalEncoder/) | [VT2848](/CANoeDemos/IncrementalEncoder/) |  |
+| Incremental Encoder | 1.1 | 2025-09-30 | [Project](/Projects/IncrementalEncoder/) | [VT2848](/CANoeDemos/IncrementalEncoder/) |  |
 | Measurement | 1.1| 2025-08-19 | [Project](/Projects/Measurement/) | [VT5838](/CANoeDemos/Measurement/) |  |
 | Phase Accumulator | 1.0 | 2024-07-12 | [Project](/Projects/PhaseAccumulator/) | [VT5838](/CANoeDemos/PhaseAccumulator/) |  |
 | RAM Two Port | 1.0 | 2024-07-09 | [Project](/Projects/RAMTwoPort/) | [VT5838](/CANoeDemos/RAMTwoPort/) |  |
@@ -26,6 +27,11 @@ The *CANoe demos* folder (table below) includes a CANoe demo and additional VHDL
 Bugs, glitches, notes and requests can be specified under [Issues](https://github.com/vectorgrp/vt-system-fpga-examples/issues).
 
 ## Changelog
+
+### Version 1.4.0 (2025-09-30)
+
+- added 'Communication' project & demo
+- added 'Phase Difference' measurement to 'Incremental Encoder' project & demo (incremented to version 1.1)
 
 ### Version 1.3.0 (2025-08-27)
 

@@ -21,11 +21,11 @@ This project contains the VHDL code for a quadrature encoder and decoder.
 - **Number of Teeth:** Number of teeth for a signal (A or B).
 - **States per Tooth:** Number of states per tooth of a signal so that the necessary resolution in [°] is possible. This value can be calculated with the following formula: $`StatesPerTooth = {360 [°] \over Resolution [°]}`$. A Resolution of 90° for example would need 4 states per tooth. (See picture below.)
 - **Signal A, B Rising Edge State:** This signal is used to tell the FPGA at which state in a tooth the signal has a rising edge.
-- **Signal A. B Falling Edge State:** This signal is used to tell the FPGA at which state in a tooth the signal has a falling edge.
+- **Signal A, B Falling Edge State:** This signal is used to tell the FPGA at which state in a tooth the signal has a falling edge.
 - **Signal Index Rising Edge Tooth:** This signal is used to tell the FPGA at which tooth the index signal has a rising edge.
 - **Signal Index Falling Edge Tooth:** This signal is used to tell the FPGA at which tooth the index signal has a falling edge.
 - **Signal Index Rising Edge State:** This signal is used to tell the FPGA at which state in a tooth the signal has a rising edge.
-- **Signal A. B Falling Edge State:** This signal is used to tell the FPGA at which state in a tooth the signal has a falling edge.
+- **Signal Index Falling Edge State:** This signal is used to tell the FPGA at which state in a tooth the signal has a falling edge.
 - **Next State:** This signal tells the code when the next state should be output. It must be '1' for only one cycle.
 - **Previous State:** This signal tells the code when the previous state should be output. It must be '1' for only one cycle.
 - **Reset Position:** This sets the output position to the first state of the first tooth.
@@ -74,3 +74,27 @@ This project contains the VHDL code for a quadrature encoder and decoder.
 - To prevent a position in-/decrement in the case of a slight phase difference between A/B signal and the index signal a filter is used to detect in-/decrement requests in the code in the proximity of a recognized index signal. The filter width is the number of FPGA cycles in front and behind the index signal that are filtered. The filter works by reseting the shift register of A/B if an applicable edge of the index signal is recognized. In-/decrement request still in the register are overwritten (A/b before index), as are A/B signals shifted into the register after the index signal (index before A/B).
 
 <p align="center"><img src="files/Filter.png" alt="Filter" width=1000/></p>
+
+## Phase Measurement
+
+### Generics
+
+- **Counter Width:** Width used for both counters
+- **Phase Counter State:** Bitcombination of the signals A and B used as enable for the phase counter; default: A = '1' and B = '0'
+
+### Input
+
+- **Signal A, B:** Those are the signals A & B.
+
+### Output
+
+- **Phase Counter:** Number of clock cycles while *Phase Counter State* is fullfilled; reset after each period
+- **Period Counter:** Number of clock cycles for a period; reset after each period; depending on the signal it could be the high part of one period and the low part of another because a rising edge of the signal triggers the reset of the counter
+
+### Architecture
+
+- the counter values values necessary to calculate the phase didfference are the period duration and duration for when the two signals are different
+- the phase difference can be calculated using the following formula: $`Phase Difference [°] = 360 [°] * {Phase Counter \over Period Counter}`$
+- ❗ **Limitation:** For this code to be used the high parts and low parts of both signals must overlap (which is the case for quadrature encoder signals).
+
+<p align="center"><img src="files/PhaseMeasurement.png" alt="Phase Measurement" width=500/></p>

@@ -1,0 +1,4 @@
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../../Projects/CommonSourceFiles/hdl/LibraryBase.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../../Projects/Communication/hdl/I2C_Sensor_7Bit.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../../Projects/Communication/hdl/I2C_Sensor_10Bit.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../../Projects/RAMTwoPort/hdl/RAMTwoPort.vhd"]

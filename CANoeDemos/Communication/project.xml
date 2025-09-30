@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project TargetModuleType="MultiModule" Workflow="2" FPGAClockFrequency="0" FPGAVariant="0" ReadBlockUpdateTimeUs="10000" ReadBlockUpdateTimeMs="10" Comment="" Version="3" EnableIBC="false" EnableIBCPlus="false" IBCMaster="">
+  <Sysvars />
+  <IBCSignals />
+  <IBCPlus InterfaceVersion="0" SystemId="0">
+    <IBCPlusLane Index="0" IsActive="true" Mode="0" Speed="40" />
+    <IBCPlusLane Index="1" IsActive="true" Mode="0" Speed="40" />
+    <IBCPlusLane Index="2" IsActive="true" Mode="0" Speed="40" />
+    <IBCPlusLane Index="3" IsActive="true" Mode="0" Speed="40" />
+  </IBCPlus>
+</Project>

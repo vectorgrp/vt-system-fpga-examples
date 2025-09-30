@@ -1,4 +1,4 @@
--- Copyright (c) 2024 Vector Informatik GmbH
+-- Copyright (c) 2025 Vector Informatik GmbH
 
 -- Permission is hereby granted, free of charge, to any person obtaining
 -- a copy of this software and associated documentation files (the
@@ -201,6 +201,14 @@ ENTITY User IS
     Frequency_ch40 : in std_logic_vector(31 downto 0);
     Frequency_ch43 : in std_logic_vector(31 downto 0);
     Frequency_ch46 : in std_logic_vector(31 downto 0);
+    PhaseDifference_ch1 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch4 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch7 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch10 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch13 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch16 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch19 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch22 : out std_logic_vector(31 downto 0) := (others => '0');
     -- @CMD=SYSVAREND
     --
     -- @CMD=TIMESTAMPSTART
@@ -334,11 +342,14 @@ END;
 ARCHITECTURE rtl OF User IS
 
   -- encoder
-  CONSTANT c_EncoderChannels : natural := 8;
+  CONSTANT c_EncoderChannels          : natural := 8;
   SUBTYPE c_EncoderChannelsRange IS natural RANGE 1 TO c_EncoderChannels;
   -- decoder
-  CONSTANT c_DecoderChannels : natural := 8;
+  CONSTANT c_DecoderChannels          : natural := 8;
   SUBTYPE c_DecoderChannelsRange IS natural RANGE 1 TO c_DecoderChannels;
+  -- phase measurement
+  CONSTANT c_PhaseMeasurementChannels : natural := 8;
+  SUBTYPE c_PhaseMeasurementChannelsRange IS natural RANGE 1 TO c_PhaseMeasurementChannels;
   --
   TYPE t_PhaseAccumulatorChannels IS RECORD
     Active               : t_ArrayLogic(c_EncoderChannelsRange);
@@ -381,6 +392,16 @@ ARCHITECTURE rtl OF User IS
     ErrorFlag       : t_ArrayLogic(c_DecoderChannelsRange);
   END RECORD;
   --
+  TYPE t_PhaseMeasurementChannels IS RECORD
+    PhaseCounter    : t_ArrayVector(c_PhaseMeasurementChannelsRange)(PhaseDifference_ch1'range);
+    PeriodCounter   : t_ArrayVector(c_PhaseMeasurementChannelsRange)(PhaseDifference_ch1'range);
+    PhaseDifference : t_ArrayVector(c_PhaseMeasurementChannelsRange)(PhaseDifference_ch1'range);
+    Numer           : std_logic_vector(31 DOWNTO 0);
+    Denom           : std_logic_vector(31 DOWNTO 0);
+    Quotient        : std_logic_vector(31 DOWNTO 0);
+    Remain          : std_logic_vector(31 DOWNTO 0);
+  END RECORD;
+  --
   SIGNAL s_PhaseAccumulatorChannels : t_PhaseAccumulatorChannels := (
     Active               => (OTHERS => '1'),  -- always active
     StartValue           => (OTHERS => (OTHERS => '0')),
@@ -418,6 +439,15 @@ ARCHITECTURE rtl OF User IS
     MaxPosition     => (OTHERS => (OTHERS => '0')),
     Position        => (OTHERS => (OTHERS => '0')),
     ErrorFlag       => (OTHERS => '0'));
+  --
+  SIGNAL s_PhaseMeasurementChannels : t_PhaseMeasurementChannels := (
+    PhaseCounter    => (OTHERS => (OTHERS => '0')),
+    PeriodCounter   => (OTHERS => (OTHERS => '0')),
+    PhaseDifference => (OTHERS => (OTHERS => '0')),
+    Numer           => (OTHERS => '1'),
+    Denom           => (OTHERS => '1'),
+    Quotient        => (OTHERS => '1'),
+    Remain          => (OTHERS => '0'));
 
 BEGIN
 
@@ -660,6 +690,20 @@ BEGIN
   END PROCESS proc_SignalAllocationDecoder;
 
   --
+
+  proc_SignalAllocationPhaseMeasurement : PROCESS (ALL)
+  BEGIN  -- PROCESS proc_SignalAllocationPhaseMeasurement
+    PhaseDifference_ch1  <= s_PhaseMeasurementChannels.PhaseDifference(1);
+    PhaseDifference_ch4  <= s_PhaseMeasurementChannels.PhaseDifference(2);
+    PhaseDifference_ch7  <= s_PhaseMeasurementChannels.PhaseDifference(3);
+    PhaseDifference_ch10 <= s_PhaseMeasurementChannels.PhaseDifference(4);
+    PhaseDifference_ch13 <= s_PhaseMeasurementChannels.PhaseDifference(5);
+    PhaseDifference_ch16 <= s_PhaseMeasurementChannels.PhaseDifference(6);
+    PhaseDifference_ch19 <= s_PhaseMeasurementChannels.PhaseDifference(7);
+    PhaseDifference_ch22 <= s_PhaseMeasurementChannels.PhaseDifference(8);
+  END PROCESS proc_SignalAllocationPhaseMeasurement;
+
+  --
   --
   --
 
@@ -755,5 +799,59 @@ BEGIN
         o_Error           => s_DecoderChannels.ErrorFlag(Channel)
         );
   END GENERATE DecoderChannels;
+
+  --
+  --
+  --
+
+  PhaseMeasurementChannels : FOR Channel IN c_PhaseMeasurementChannelsRange GENERATE
+    inst_PhaseMeasurement : ENTITY work.PhaseMeasurement
+      GENERIC MAP (
+        g_CounterWidth      => 32,
+        g_PhaseCounterState => "10"
+        )
+      PORT MAP (
+        i_clock         => clk,
+        i_reset         => areset,
+        i_SignalA       => s_DecoderChannels.SignalA(Channel),
+        i_SignalB       => s_DecoderChannels.SignalB(Channel),
+        o_PhaseCounter  => s_PhaseMeasurementChannels.PhaseCounter(Channel),
+        o_PeriodCounter => s_PhaseMeasurementChannels.PeriodCounter(Channel)
+        );
+  END GENERATE PhaseMeasurementChannels;
+
+  --
+
+  proc_DividerSignalAllocation : PROCESS (ALL)
+    VARIABLE v_Channel : natural := 1;
+  BEGIN  -- PROCESS proc_DividerSignalAllocation
+    IF (areset = c_reset_active) THEN     -- asynchronous reset (active package defined)
+      NULL;
+    ELSIF (clk'event AND clk = '1') THEN  -- rising clock edge
+      s_PhaseMeasurementChannels.Numer                      <= std_logic_vector(resize(1024 * unsigned(s_PhaseMeasurementChannels.PhaseCounter(v_Channel)), 32));
+      s_PhaseMeasurementChannels.Denom                      <= s_PhaseMeasurementChannels.PeriodCounter(v_Channel);
+      --
+      s_PhaseMeasurementChannels.PhaseDifference(v_Channel) <= s_PhaseMeasurementChannels.Quotient;
+      --
+      --
+      --
+      IF (v_Channel = c_PhaseMeasurementChannels) THEN
+        v_Channel := 1;
+      ELSE
+        v_Channel := v_Channel + 1;
+      END IF;
+    END IF;
+  END PROCESS proc_DividerSignalAllocation;
+
+  --
+
+  inst_LPM_Divider_32Bit_unsigned : ENTITY work.LPM_Divider_32Bit_unsigned
+    PORT MAP (
+      clock    => clk,
+      denom    => s_PhaseMeasurementChannels.Denom,
+      numer    => s_PhaseMeasurementChannels.Numer,
+      quotient => s_PhaseMeasurementChannels.Quotient,
+      remain   => s_PhaseMeasurementChannels.Remain
+      );
 
 END ARCHITECTURE rtl;  -- of  User

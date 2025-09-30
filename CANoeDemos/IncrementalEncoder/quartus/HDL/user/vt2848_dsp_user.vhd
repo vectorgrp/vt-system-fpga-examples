@@ -234,6 +234,14 @@ COMPONENT User IS
     Frequency_ch40 : in std_logic_vector(31 downto 0);
     Frequency_ch43 : in std_logic_vector(31 downto 0);
     Frequency_ch46 : in std_logic_vector(31 downto 0);
+    PhaseDifference_ch1 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch4 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch7 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch10 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch13 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch16 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch19 : out std_logic_vector(31 downto 0) := (others => '0');
+    PhaseDifference_ch22 : out std_logic_vector(31 downto 0) := (others => '0');
     -- @CMD=SYSVAREND
     --
     -- @CMD=TIMESTAMPSTART
@@ -628,14 +636,22 @@ Error_ch19(0)   => o_outvar(0)(4),
 Error_ch22(0)   => o_outvar(0)(5),
 Error_ch4(0)   => o_outvar(0)(6),
 Error_ch7(0)   => o_outvar(0)(7),
-Position_ch1   => o_outvar(1)(31 downto 0),
-Position_ch10   => o_outvar(2)(31 downto 0),
-Position_ch13   => o_outvar(3)(31 downto 0),
-Position_ch16   => o_outvar(4)(31 downto 0),
-Position_ch19   => o_outvar(5)(31 downto 0),
-Position_ch22   => o_outvar(6)(31 downto 0),
-Position_ch4   => o_outvar(7)(31 downto 0),
-Position_ch7   => o_outvar(8)(31 downto 0)
+PhaseDifference_ch1   => o_outvar(1)(31 downto 0),
+PhaseDifference_ch10   => o_outvar(2)(31 downto 0),
+PhaseDifference_ch13   => o_outvar(3)(31 downto 0),
+PhaseDifference_ch16   => o_outvar(4)(31 downto 0),
+PhaseDifference_ch19   => o_outvar(5)(31 downto 0),
+PhaseDifference_ch22   => o_outvar(6)(31 downto 0),
+PhaseDifference_ch4   => o_outvar(7)(31 downto 0),
+PhaseDifference_ch7   => o_outvar(8)(31 downto 0),
+Position_ch1   => o_outvar(9)(31 downto 0),
+Position_ch10   => o_outvar(10)(31 downto 0),
+Position_ch13   => o_outvar(11)(31 downto 0),
+Position_ch16   => o_outvar(12)(31 downto 0),
+Position_ch19   => o_outvar(13)(31 downto 0),
+Position_ch22   => o_outvar(14)(31 downto 0),
+Position_ch4   => o_outvar(15)(31 downto 0),
+Position_ch7   => o_outvar(16)(31 downto 0)
 );
   -- @CMD=PORTMAPEND
 

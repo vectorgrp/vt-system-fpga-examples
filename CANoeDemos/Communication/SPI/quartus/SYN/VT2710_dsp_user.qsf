@@ -1,0 +1,405 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.1.2 Build 203 01/18/2017 SJ Standard Edition
+# Date created = 09:36:00  March 11, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		VT2710_dsp_user_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:16:25  AUGUST 21, 2015"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_AA10 -to po_f2b_tx_data[0]
+set_location_assignment PIN_Y17 -to pi_f2b_rx_data[0]
+set_location_assignment PIN_AB20 -to pi_f2b_rx_data[1]
+set_location_assignment PIN_AB17 -to pi_f2b_rx_data[2]
+set_location_assignment PIN_AA20 -to pi_f2b_reset
+set_location_assignment PIN_AA17 -to pi_f2b_rx_data[3]
+set_location_assignment PIN_AA19 -to pi_f2b_rx_data[4]
+set_location_assignment PIN_AB19 -to pio_f2b_device_specific[29]
+set_location_assignment PIN_AB14 -to pi_f2b_rx_data[6]
+set_location_assignment PIN_AB18 -to pi_f2b_rx_data[7]
+set_location_assignment PIN_T16 -to pi_f2b_rx_data[8]
+set_location_assignment PIN_AA14 -to pi_f2b_rx_data[9]
+set_location_assignment PIN_V14 -to pi_f2b_rx_data[10]
+set_location_assignment PIN_T15 -to pi_f2b_rx_data[11]
+set_location_assignment PIN_V15 -to pi_f2b_rx_data[12]
+set_location_assignment PIN_AA16 -to pi_f2b_rx_data[13]
+set_location_assignment PIN_AB16 -to pi_f2b_rx_data[14]
+set_location_assignment PIN_W15 -to pi_f2b_rx_data[15]
+set_location_assignment PIN_AB15 -to pi_f2b_rx_data[5]
+set_location_assignment PIN_AA15 -to pi_f2b_rx_en
+set_location_assignment PIN_W14 -to pio_f2b_device_specific[26]
+set_location_assignment PIN_V13 -to pio_f2b_device_specific[27]
+set_location_assignment PIN_U14 -to pio_f2b_device_specific[28]
+set_location_assignment PIN_V16 -to pio_f2b_device_specific[30]
+set_location_assignment PIN_AA18 -to pio_f2b_device_specific[31]
+set_location_assignment PIN_U12 -to pio_f2b_device_specific[32]
+set_location_assignment PIN_V12 -to pio_f2b_device_specific[33]
+set_location_assignment PIN_W13 -to pio_f2b_device_specific[34]
+set_location_assignment PIN_Y13 -to pio_f2b_device_specific[35]
+set_location_assignment PIN_AA13 -to pio_f2b_device_specific[36]
+set_location_assignment PIN_AB13 -to pio_f2b_device_specific[37]
+set_location_assignment PIN_AB10 -to po_f2b_tx_data[1]
+set_location_assignment PIN_AA9 -to po_f2b_tx_data[2]
+set_location_assignment PIN_AB9 -to po_f2b_tx_data[3]
+set_location_assignment PIN_V11 -to pio_f2b_device_specific[25]
+set_location_assignment PIN_W10 -to po_f2b_tx_data[5]
+set_location_assignment PIN_Y10 -to po_f2b_tx_data[6]
+set_location_assignment PIN_AA8 -to po_f2b_tx_data[7]
+set_location_assignment PIN_AB8 -to po_f2b_tx_data[8]
+set_location_assignment PIN_V8 -to po_f2b_tx_data[9]
+set_location_assignment PIN_AA7 -to po_f2b_tx_data[10]
+set_location_assignment PIN_AB7 -to po_f2b_tx_data[11]
+set_location_assignment PIN_V5 -to po_f2b_tx_data[12]
+set_location_assignment PIN_Y6 -to po_f2b_tx_data[13]
+set_location_assignment PIN_V10 -to po_f2b_tx_data[14]
+set_location_assignment PIN_V9 -to pio_f2b_device_specific[11]
+set_location_assignment PIN_U9 -to po_f2b_tx_data[15]
+set_location_assignment PIN_W8 -to po_f2b_tx_en
+set_location_assignment PIN_Y8 -to pio_f2b_device_specific[12]
+set_location_assignment PIN_U11 -to pio_f2b_device_specific[13]
+set_location_assignment PIN_AB5 -to pio_f2b_device_specific[14]
+set_location_assignment PIN_AA5 -to pio_f2b_device_specific[15]
+set_location_assignment PIN_AA4 -to pio_f2b_device_specific[16]
+set_location_assignment PIN_AB4 -to pio_f2b_device_specific[17]
+set_location_assignment PIN_R5 -to pio_f2b_device_specific[18]
+set_location_assignment PIN_T5 -to pio_f2b_device_specific[19]
+set_location_assignment PIN_Y7 -to pio_f2b_device_specific[20]
+set_location_assignment PIN_Y3 -to pio_f2b_device_specific[21]
+set_location_assignment PIN_V4 -to pio_f2b_device_specific[22]
+set_location_assignment PIN_W7 -to pio_f2b_device_specific[23]
+set_location_assignment PIN_W6 -to pio_f2b_device_specific[24]
+set_location_assignment PIN_U10 -to po_f2b_tx_data[4]
+set_location_assignment PIN_Y2 -to pio_f2b_device_specific[0]
+set_location_assignment PIN_V3 -to pio_f2b_device_specific[1]
+set_location_assignment PIN_Y4 -to pio_f2b_device_specific[2]
+set_location_assignment PIN_AA1 -to pio_f2b_device_specific[3]
+set_location_assignment PIN_T3 -to pio_f2b_device_specific[4]
+set_location_assignment PIN_Y1 -to pio_f2b_device_specific[5]
+set_location_assignment PIN_W2 -to pio_f2b_device_specific[6]
+set_location_assignment PIN_W1 -to pio_f2b_device_specific[7]
+set_location_assignment PIN_V2 -to pio_f2b_device_specific[8]
+set_location_assignment PIN_V1 -to pio_f2b_device_specific[9]
+set_location_assignment PIN_U2 -to pio_f2b_device_specific[10]
+set_location_assignment PIN_F2 -to pi_f2b_data_req
+set_location_assignment PIN_F1 -to po_f2b_nlocked
+set_location_assignment PIN_AA3 -to po_f2b_tx_clk
+set_location_assignment PIN_T2 -to pi_fpga_clock[0]
+set_location_assignment PIN_A11 -to pi_fpga_clock[1]
+set_location_assignment PIN_T22 -to pi_f2b_rx_clk
+set_location_assignment PIN_G5 -to pi_mic_lvds[0]
+set_location_assignment PIN_E4 -to pi_mic_lvds[1]
+set_location_assignment PIN_H7 -to pi_mic_lvds[2]
+set_location_assignment PIN_G3 -to pi_mic_lvds[3]
+set_location_assignment PIN_B1 -to po_mic_lvds[0]
+set_location_assignment PIN_B2 -to po_mic_lvds[1]
+set_location_assignment PIN_C2 -to po_mic_lvds[2]
+set_location_assignment PIN_E3 -to po_mic_lvds[3]
+set_location_assignment PIN_C1 -to po_debug_led[0]
+set_location_assignment PIN_E1 -to po_debug_led[4]
+set_location_assignment PIN_J6 -to po_debug_led[3]
+set_location_assignment PIN_H6 -to po_debug_led[2]
+set_location_assignment PIN_D2 -to po_debug_led[1]
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+# Compiler Assignments
+# ====================
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name MUX_RESTRUCTURE ON
+set_global_assignment -name ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS OFF
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8L
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name OPTIMIZE_POWER_DURING_SYNTHESIS OFF
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name TOP_LEVEL_ENTITY vtxxxx_dsp_top
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE75F23I8L
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name CYCLONEII_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
+set_global_assignment -name CYCLONEIII_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OPTIMIZE_POWER_DURING_FITTING OFF
+set_global_assignment -name SEED 2
+set_global_assignment -name DEVICE_MIGRATION_LIST "EP4CE75F23I8L,EP4CE15F23I8L,EP4CE40F23I8L,EP4CE30F23I8L,EP4CE55F23I8L,EP4CE115F23I8L"
+# Assembler Assignments
+# =====================
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name GENERATE_RBF_FILE ON
+# SignalTap II Assignments
+# ========================
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE ibc.stp
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+# Advanced I/O Timing Assignments
+# ===============================
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+# start EDA_TOOL_SETTINGS(eda_blast_fpga)
+# ---------------------------------------
+	# Analysis & Synthesis Assignments
+	# ================================
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+# end EDA_TOOL_SETTINGS(eda_blast_fpga)
+# -------------------------------------
+# ----------------------------
+# start ENTITY(vtxxxx_dsp_top)
+	# Pin & Location Assignments
+	# ==========================
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to pi_f2b*
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to po_f2b*
+	# Fitter Assignments
+	# ==================
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[4]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[5]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[6]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[7]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[8]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[9]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[10]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[18]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[19]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[22]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_fpga_clock[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_en
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[4]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[5]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[6]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[7]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[8]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[9]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[10]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[11]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[12]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[13]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[14]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_data[15]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to po_f2b_tx_clk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[11]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[12]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[13]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[14]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[15]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[16]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[17]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[20]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[21]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[23]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[24]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[25]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[26]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[27]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[28]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[29]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[30]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[31]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[32]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[33]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[34]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[35]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[36]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pio_f2b_device_specific[37]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_en
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[4]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[5]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[6]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[7]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[8]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[9]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[10]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[11]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[12]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[13]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[14]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_data[15]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_reset
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_f2b_rx_clk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pi_fpga_clock[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_data_req
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_nlocked
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[18]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[19]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[22]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_fpga_clock[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_en
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_data[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_f2b_tx_clk
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[16]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[17]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[20]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[21]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[23]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[24]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[25]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[26]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[27]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[28]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[29]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[30]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[31]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[32]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to pio_f2b_device_specific[33]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[34]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[35]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[36]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pio_f2b_device_specific[37]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_en
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_data[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_reset
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_f2b_rx_clk
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_fpga_clock[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_mic_lvds[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_mic_lvds[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_mic_lvds[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to pi_mic_lvds[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_mic_lvds[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_mic_lvds[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_mic_lvds[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_mic_lvds[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_debug_led[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_debug_led[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_debug_led[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_debug_led[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to po_debug_led[0]
+	# start LOGICLOCK_REGION(Root Region)
+	# -----------------------------------
+		# LogicLock Region Assignments
+		# ============================
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+	# end LOGICLOCK_REGION(Root Region)
+	# ---------------------------------
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+		# Incremental Compilation Assignments
+		# ===================================
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+# end ENTITY(vtxxxx_dsp_top)
+# --------------------------
+set_global_assignment -name SEARCH_PATH ../../hdl
+set_global_assignment -name QIP_FILE ../../hdl/SPI.qip
+set_global_assignment -name SDC_FILE VT2710_dsp_user.sdc
+set_global_assignment -name VHDL_FILE ../HDL/user/vt2710_dsp_user_scale_pack.vhd
+set_global_assignment -name VHDL_FILE ../HDL/user/vt2710_dsp_user.vhd
+set_global_assignment -name VHDL_FILE ../HDL/vtpb_dsp_top_enc.vhd
+set_global_assignment -name VHDL_FILE ../../hdl/SPI_GN.vhd
+set_global_assignment -name VHDL_FILE ../../hdl/SPI_Channel.vhd

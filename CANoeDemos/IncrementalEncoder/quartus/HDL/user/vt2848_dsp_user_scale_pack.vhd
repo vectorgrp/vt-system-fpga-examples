@@ -47,7 +47,7 @@ PACKAGE global_scale IS
   CONSTANT p_reset_level                  : std_logic                    := '1';  -- '1'-high/'0'-low active reset
   --
   CONSTANT p_invar  : natural RANGE 0 TO 128 := 58;
-  CONSTANT p_outvar  : natural RANGE 0 TO 128 := 9;
+  CONSTANT p_outvar  : natural RANGE 0 TO 128 := 17;
   --
   CONSTANT p_ibc_active                   : std_logic                    := '0';
   CONSTANT p_ibc_sync_master              : std_logic                    := '0';

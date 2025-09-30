@@ -2,3 +2,4 @@ set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../
 set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../Projects/IncrementalEncoder/hdl/QuadratureDecoder.vhd"]
 set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../Projects/IncrementalEncoder/hdl/QuadratureEncoder.vhd"]
 set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../Projects/PhaseAccumulator/hdl/PhaseAccumulator.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "../../../Projects/IncrementalEncoder/hdl/PhaseMeasurement.vhd"]

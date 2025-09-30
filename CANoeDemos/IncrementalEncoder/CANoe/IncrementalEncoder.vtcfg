@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <VTSConfiguration version="6">
 
-  <module MDID="" VDID="DFFDEE7D8DDFBEC55E810363DC35463400000000" interface="2" productCode="b2000" revision="0" serialNo="0" vendorID="5">
+  <module MDID="" VDID="4798575A1D51CF43A86B938B00752F8200000000" interface="2" productCode="b2000" revision="10310" serialNo="86" vendorID="5">
     <channels>
       <channel name="VT2848_1_Ch1" startStateEnabled="false"/>
       <channel name="VT2848_1_Ch2" startStateEnabled="false"/>
@@ -146,6 +146,7 @@
       <value active="false" cycleTime="2710" id="1f00"/>
       <value active="false" data="40420f00" id="80009f00"/>
       <value active="false" id="80011000"/>
+      <value active="true" cycleTime="64" id="2001200"/>
       <value active="false" id="80012f00"/>
       <value active="false" cycleTime="2710" id="2000"/>
       <value active="false" cycleTime="2710" id="2100"/>
@@ -349,6 +350,7 @@
       <value active="false" cycleTime="2710" id="4100"/>
       <value active="false" id="8000c200"/>
       <value active="false" cycleTime="2710" id="4200"/>
+      <value active="true" cycleTime="64" id="2001100"/>
       <value active="false" id="80014400"/>
       <value active="false" id="8000c300"/>
       <value active="false" cycleTime="2710" id="4300"/>
@@ -357,6 +359,7 @@
       <value active="false" cycleTime="2710" id="4400"/>
       <value active="false" id="8000c500"/>
       <value active="false" cycleTime="2710" id="4500"/>
+      <value active="true" cycleTime="64" id="2001400"/>
       <value active="false" id="80014d00"/>
       <value active="false" cycleTime="2710" id="4600"/>
       <value active="false" cycleTime="2710" id="4700"/>
@@ -365,6 +368,7 @@
       <value active="false" id="80014200"/>
       <value active="false" cycleTime="2710" id="4900"/>
       <value active="false" id="8000c900"/>
+      <value active="false" id="2001800"/>
       <value active="false" id="80015100"/>
       <value active="false" cycleTime="2710" id="4a00"/>
       <value active="false" cycleTime="2710" id="4b00"/>
@@ -626,6 +630,7 @@
       <value active="false" id="f0000f00"/>
       <value active="false" id="f0001000"/>
       <value active="false" data="0200" id="82005400"/>
+      <value active="true" cycleTime="64" id="2001700"/>
       <value active="false" data="0400" id="82007400"/>
       <value active="false" data="00000000" id="82007c00"/>
       <value active="false" data="0300" id="82004000"/>
@@ -634,6 +639,7 @@
       <value active="true" cycleTime="64" id="2000900"/>
       <value active="false" data="0100" id="82004800"/>
       <value active="false" data="0200" id="82003300"/>
+      <value active="true" cycleTime="64" id="2001500"/>
       <value active="false" data="0000" id="82003b00"/>
       <value active="false" data="0000" id="82003f00"/>
       <value active="false" data="0000" id="82005800"/>
@@ -646,12 +652,12 @@
       <value active="false" data="0a00" id="82002f00"/>
       <value active="false" data="0200" id="82003700"/>
       <value active="false" data="00" id="82000300"/>
-      <value active="false" id="2001000"/>
+      <value active="true" cycleTime="64" id="2001000"/>
       <value active="false" data="00" id="82001500"/>
       <value active="false" data="0a000000" id="82008200"/>
-      <value active="true" cycleTime="64" id="2000200"/>
+      <value active="true" cycleTime="2710" id="2000200"/>
       <value active="false" data="0000" id="82006100"/>
-      <value active="true" cycleTime="64" id="2000600"/>
+      <value active="true" cycleTime="2710" id="2000600"/>
       <value active="false" data="0a000000" id="82008600"/>
       <value active="true" cycleTime="64" id="2000b00"/>
       <value active="false" data="0000" id="82006800"/>
@@ -662,20 +668,22 @@
       <value active="false" data="0000" id="82005a00"/>
       <value active="false" data="0000" id="82003c00"/>
       <value active="false" data="00" id="82002200"/>
-      <value active="true" cycleTime="64" id="2000000"/>
+      <value active="true" cycleTime="2710" id="2000000"/>
       <value active="false" data="0a000000" id="82008000"/>
-      <value active="true" cycleTime="64" id="2000100"/>
+      <value active="true" cycleTime="2710" id="2000100"/>
       <value active="false" data="0a000000" id="82008100"/>
       <value active="false" data="0a000000" id="82008300"/>
-      <value active="true" cycleTime="64" id="2000300"/>
+      <value active="true" cycleTime="2710" id="2000300"/>
       <value active="false" data="0a000000" id="82008400"/>
-      <value active="true" cycleTime="64" id="2000400"/>
+      <value active="true" cycleTime="2710" id="2000400"/>
       <value active="false" data="0a000000" id="82008500"/>
-      <value active="true" cycleTime="64" id="2000500"/>
+      <value active="true" cycleTime="2710" id="2000500"/>
       <value active="false" data="0a000000" id="82008700"/>
-      <value active="true" cycleTime="64" id="2000700"/>
+      <value active="true" cycleTime="2710" id="2000700"/>
       <value active="true" cycleTime="64" id="2000800"/>
       <value active="true" cycleTime="64" id="2000d00"/>
+      <value active="true" cycleTime="64" id="2001300"/>
+      <value active="true" cycleTime="64" id="2001600"/>
       <value active="false" data="00" id="82000000"/>
       <value active="false" data="00" id="82000100"/>
       <value active="false" data="00" id="82000400"/>
