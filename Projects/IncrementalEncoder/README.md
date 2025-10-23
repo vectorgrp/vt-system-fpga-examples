@@ -1,10 +1,11 @@
 # Incremental Encoder
 
-- Version: 1.0
+- Version: 1.2
 
 ## Changelog
 
-
+- Version 1.2: fixed a timing problem of the phase measurement
+- Version 1.1: added phase measurement
 
 ## Overview
 

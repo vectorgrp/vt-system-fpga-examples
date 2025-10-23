@@ -56,40 +56,41 @@ ARCHITECTURE rtl OF PhaseMeasurement IS
     PeriodCounter   : unsigned(o_PeriodCounter'range);
   END RECORD;
   --
-  SIGNAL s_PhaseMeasurement : t_PhaseMeasurement := (
-    EdgeRecognition => (OTHERS => '0'),
-    PhaseCounter    => to_unsigned(1, g_CounterWidth),
-    PeriodCounter   => to_unsigned(1, g_CounterWidth)
-    );
+--  SIGNAL s_PhaseMeasurement : t_PhaseMeasurement := (
+--    EdgeRecognition => (OTHERS => '0'),
+--    PhaseCounter    => to_unsigned(1, g_CounterWidth),
+--    PeriodCounter   => to_unsigned(1, g_CounterWidth)
+--    );
 
 BEGIN  -- rtl
 
   proc_PhaseMeasurement : PROCESS (i_clock, i_reset)
+    VARIABLE v_PhaseMeasurement : t_PhaseMeasurement := (
+      EdgeRecognition => (OTHERS => '0'),
+      PhaseCounter    => to_unsigned(1, g_CounterWidth),
+      PeriodCounter   => to_unsigned(1, g_CounterWidth));
   BEGIN  -- PROCESS proc_PhaseMeasurement
     IF (i_reset = c_reset_active) THEN                                       -- asynchronous reset (active package defined)
       NULL;
     ELSIF (i_clock'event AND i_clock = '1') THEN                             -- rising clock edge
-      s_PhaseMeasurement.EdgeRecognition <= s_PhaseMeasurement.EdgeRecognition(0) & i_SignalA;
+      v_PhaseMeasurement.EdgeRecognition := v_PhaseMeasurement.EdgeRecognition(0) & i_SignalA;
+      --
+      -- the data is output after a whole period
+      IF (v_PhaseMeasurement.EdgeRecognition = c_RisingEdge) THEN
+        o_PhaseCounter                   <= std_logic_vector(v_PhaseMeasurement.PhaseCounter);
+        o_PeriodCounter                  <= std_logic_vector(v_PhaseMeasurement.PeriodCounter);
+        --
+        v_PhaseMeasurement.PhaseCounter  := to_unsigned(0, g_CounterWidth);  -- reset for the next period
+        v_PhaseMeasurement.PeriodCounter := to_unsigned(0, g_CounterWidth);
+      END IF;
       --
       -- state for the phase difference -> phase counter
       -- it doesn't matter if AB is "10" or "01"
       IF (i_SignalA & i_SignalB = g_PhaseCounterState) THEN
-        s_PhaseMeasurement.PhaseCounter <= s_PhaseMeasurement.PhaseCounter + 1;
+        v_PhaseMeasurement.PhaseCounter := v_PhaseMeasurement.PhaseCounter + 1;
       END IF;
       --
-      -- phase difference is a relative value: phase counter / period counter
-      -- it doesn't matter if it's counted during a single period or two; it always consists of one high and one low part
-      s_PhaseMeasurement.PeriodCounter <= s_PhaseMeasurement.PeriodCounter + 1;
-      --
-      --
-      -- the data is output after a whole period
-      IF (s_PhaseMeasurement.EdgeRecognition = c_RisingEdge) THEN
-        o_PhaseCounter                   <= std_logic_vector(s_PhaseMeasurement.PhaseCounter);
-        o_PeriodCounter                  <= std_logic_vector(s_PhaseMeasurement.PeriodCounter);
-        --
-        s_PhaseMeasurement.PhaseCounter  <= to_unsigned(1, g_CounterWidth);  -- reset for the next period
-        s_PhaseMeasurement.PeriodCounter <= to_unsigned(1, g_CounterWidth);
-      END IF;
+      v_PhaseMeasurement.PeriodCounter := v_PhaseMeasurement.PeriodCounter + 1;
     END IF;
   END PROCESS proc_PhaseMeasurement;
 

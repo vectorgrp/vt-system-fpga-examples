@@ -16,7 +16,7 @@ This project contains VHDL code for a FIFO.
 
 ## Incremental Encoder
 
-This project contains VHDL code for the Quadrature Decoder and Encoder of an Incremental Encoder.
+This project contains VHDL code for the Quadrature Decoder (including phase measurement) and Encoder of an Incremental Encoder.
 
 ## Measurement
 
