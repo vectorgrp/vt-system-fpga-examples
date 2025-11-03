@@ -1,3 +1,9 @@
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="Files/Vector_Logo_VT_System_white.svg">
+<source media="(prefers-color-scheme: light)" srcset="Files/Vector_Logo_VT_System_black_red.svg">
+<img alt="Vector Logo | VT System" src="Files/Vector_Logo_VT_System_black_red.svg" width="" style="display: block; margin: 0 auto">
+</picture>
+
 # VT System User FPGA examples
 
 This repository contains examples for users of our VT System FPGA modules. 
