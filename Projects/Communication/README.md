@@ -13,6 +13,9 @@ This project contains code for different protocols:
 - UART.
 - SPI
 
+***
+***
+
 ## I<sup>2</sup>C
 
 The I<sup>2</sup>C project uses different VHDL code files for 7 and 10 bit sensor addresses.
@@ -43,6 +46,9 @@ The I<sup>2</sup>C project uses different VHDL code files for 7 and 10 bit senso
 
 - FSM (state machine) only handels the states
 - States process handels what happens in the different states; depending on the rising and falling edges of the SCL signal
+
+***
+***
 
 ## UART
 
@@ -108,6 +114,9 @@ The project uses the [Phase Accumulator](../PhaseAccumulator/) for the send timi
 ### Architecture
 
 The project uses the [Phase Accumulator](../PhaseAccumulator/) to create the timing to scan the incoming frame. The start value for the accumulator is 1&frasl;2 of the FPGA frequency and the incoming frame is scanned every time an overflow accurs. This leads to scanning a received bit in the middle of this bit.
+
+***
+***
 
 ## SPI
 
